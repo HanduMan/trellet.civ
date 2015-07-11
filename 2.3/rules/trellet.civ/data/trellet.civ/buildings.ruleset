@@ -87,9 +87,9 @@ sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to grow larger than size 8 and reduces the chance of plague\
- within the city. A Sewer System is required for a city to grow larger\
- than size 12.\
+Allows a city to grow larger than size 8.  A Sewer System is also\
+ required for a city to grow larger than size 12. \n
+Aqueduct reduces plague risk in a city by 20%.\
 ")
 ; NB: plague (illness) has to be activated in the ruleset
 
@@ -373,6 +373,28 @@ Gives one extra food resource on all Oceanic tiles.  The city needs\
  to be coastal to build this improvement.\
 ")
 
+[building_hospital]
+name		= _("Hospital")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Medicine", "Player"
+    }
+graphic	= "b.hospital"
+graphic_alt	= "b.stock_exchange"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 3
+sabotage	= 100
+sound		= "b_hospital"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Hospital reduces plague risk in a city by 30%. \
+If there is also a university in the same city \
+an additional 10% reduction is applied.\
+")
+
 [building_hydro_plant]
 name		= _("Hydro Plant")
 genus		= "Improvement"
@@ -603,7 +625,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Reduces the unhappiness caused by aggressively deployed military\
  units owned by the city by 2 under Democracy and 1 under Republic\
- -- in other words, it neutralizes the unhappiness caused by a single\
+ -- in other words, it neutralises the unhappiness caused by a single\
  military unit. This improvement has no effect under other governments.\
 ")
 ; NOTE:
@@ -736,6 +758,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Laser", "Player"
+	  "Building", "SDI Defense", "City"
     }
 graphic	= "b.sdi_defense"
 graphic_alt	= "-"
@@ -772,9 +795,9 @@ sabotage	= 100
 sound		= "b_sewer_system"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to grow larger than size 12. Pre-requirement is an Aqueduct\
- for a city to grow larger than size 8. The Sewer System further reduces\
- the chance of a plague.\
+Allows a city to grow larger than size 12.  An Aqueduct is first\
+ required for a city to grow larger than size 8. \n
+Sewer System reduces plague risk in a city by 30%. \
 ")
 ; NB: plague (illness) has to be activated in the ruleset
 
@@ -858,10 +881,10 @@ Space Modules are the most expensive parts of spaceships.  There\
 - Habitation Module: provides living space for 10,000 people.\
 "), _("\
 - Life Support Module: provides food and water for the population of\
- one Habitation Module.\
+  one Habitation Module.\
 "), _("\
 - Solar Panels: provides the energy needed for any two of the other\
- Modules.\
+  Modules.\
 "), _("\
 You can build up to 4 Space Modules of each kind.\
 "), _("\
@@ -1004,7 +1027,29 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Together with a Library, a University increases the science\
- production of a city by 250%.\
+ production of a city by 250%.\n
+Together with a Hospital, a University reduces the plague\
+ propability of a city by 40%.\
+")
+
+[building_missile_silo]
+name		= _("Missile Silo")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Rocketry", "Player"
+    }
+graphic	= "b.missile_silo"
+graphic_alt	= "b.manhattan_project"
+obsolete_by	= "None"
+build_cost	= 260
+upkeep		= 10
+sabotage	= 100
+sound		= "b_manhattan_project"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Allows you to build nukes!\
 ")
 
 [building_apollo_program]
@@ -1013,6 +1058,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Flight", "Player"
+	  "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.apollo_program"
 graphic_alt	= "-"
@@ -1036,6 +1082,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Economics", "Player"
+	  "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
@@ -1056,6 +1103,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Bronze Working", "Player"
+	  "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.colossus"
 graphic_alt	= "-"
@@ -1076,6 +1124,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Astronomy", "Player"
+	  "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.copernicus_observatory"
 graphic_alt	= "-"
@@ -1096,6 +1145,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Genetic Engineering", "Player"
+	  "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.cure_for_cancer"
 graphic_alt	= "-"
@@ -1120,6 +1170,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Railroad", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.darwins_voyage"
 graphic_alt	= "-"
@@ -1141,6 +1192,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Steam Engine", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.eiffel_tower"
 graphic_alt	= "-"
@@ -1162,6 +1214,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Literacy", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.great_library"
 graphic_alt	= "-"
@@ -1182,6 +1235,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Masonry", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.great_wall"
 graphic_alt	= "-"
@@ -1204,6 +1258,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Pottery", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.hanging_gardens"
 graphic_alt	= "-"
@@ -1229,6 +1284,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Electronics", "Player"
       "Special", "River", "Adjacent"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.hoover_dam"
 graphic_alt	= "-"
@@ -1249,6 +1305,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Theory of Gravity", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
@@ -1270,6 +1327,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Theology", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.js_bachs_cathedral"
 graphic_alt	= "-"
@@ -1290,6 +1348,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Engineering", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.king_richards_crusade"
 graphic_alt	= "-"
@@ -1310,6 +1369,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Invention", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
@@ -1330,6 +1390,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Map Making", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.lighthouse"
 graphic_alt	= "-"
@@ -1351,6 +1412,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Navigation", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.magellans_expedition"
 graphic_alt	= "-"
@@ -1370,6 +1432,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.manhattan_project"
 graphic_alt	= "-"
@@ -1388,6 +1451,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Trade", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
@@ -1407,6 +1471,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Monotheism", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.michelangelos_chapel"
 graphic_alt	= "-"
@@ -1432,6 +1497,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Mysticism", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.oracle"
 graphic_alt	= "-"
@@ -1453,6 +1519,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Masonry", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.pyramids"
 graphic_alt	= "-"
@@ -1475,6 +1542,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Computers", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.seti_program"
 graphic_alt	= "-"
@@ -1486,7 +1554,7 @@ sound		= "w_seti_program"
 sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Boosts science production in each city with a Research Lab by 100%.\
+Boosts science production in each city with a Research Lab by 100%. \
 ")
 
 [building_shakespeares_theatre]
@@ -1496,6 +1564,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Medicine", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
@@ -1516,6 +1585,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Democracy", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
@@ -1537,6 +1607,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Feudalism", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
@@ -1558,6 +1629,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Communism", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.united_nations"
 graphic_alt	= "-"
@@ -1585,6 +1657,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Industrialization", "Player"
+      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
@@ -1598,7 +1671,7 @@ helptext	= _("\
 Counts as a Police Station in every city. (That is, for each city, it\
  reduces the unhappiness caused by aggressively deployed military\
  units owned by that city by 2 under Democracy and 1 under Republic --\
- in other words, it neutralizes the unhappiness caused by a single\
+ in other words, it neutralises the unhappiness caused by a single\
  military unit per city. This wonder has no effect under other\
  governments.)\
 ")

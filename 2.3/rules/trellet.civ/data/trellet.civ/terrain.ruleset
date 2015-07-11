@@ -34,8 +34,8 @@ land_channel_requirement = 10
 ; also terrain type(s) with flag "FreshWater" in the ruleset.
 lake_max_size = 14
 
-; There is no resources in the middle of the oceans, only near coast
-ocean_resources = 0
+; There are resources in the middle of the oceans, not only near coast
+ocean_resources = 1
 
 ; special movement costs for rivers:
 ;   0 - normal movement cost for rivers (matches Civ1)
@@ -45,10 +45,10 @@ ocean_resources = 0
 ;       is effectively the same as '1', as if you had done the two moves,
 ;       except for differences relating to ZOC, etc.)
 ;   3 - 1/3 movement cost for any river to river move (classic Freeciv)
-river_move_mode=1
+river_move_mode=3
 
 ; percent added to defense if tile is Civ2-style river
-river_defense_bonus=50
+river_defense_bonus=20
 
 ; amount added to trade production if tile is Civ2-style river
 river_trade_incr=1
@@ -57,7 +57,7 @@ river_trade_incr=1
 river_help_text=_("\
 Any land terrain type may have a River on it.  A River adds 1\
  trade to the resources produced by that tile.  It also increases a tile's\
- defense factor by 50%.  Finally, land units may move along a River (but\
+ defense factor by 20%.  Finally, land units may move along a River (but\
  not diagonally); movement along a River costs only 1/3 of a movement point.\
 "), _("\
 Roads and railroads can only be built on River tiles if your\
@@ -210,16 +210,16 @@ mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
 transform_result     = "terrain_swamp"
-transform_time       = 36
+transform_time       = 144
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "no"
+warmer_wetter_result = "terrain_swamp"
 warmer_drier_result  = "terrain_swamp"
-cooler_wetter_result = "terrain_glacier"
-cooler_drier_result  = "terrain_tundra"
+cooler_wetter_result = "terrain_ice"
+cooler_drier_result  = "terrain_ice"
 native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
-flags                = "Oceanic", "NoCities", "NoPollution", "FreshWater"
+flags                = "Oceanic", "NoCities", "FreshWater"
 property_ocean_depth = 0
 helptext             = _("\
 Lakes are substantial bodies of fresh water.\
@@ -245,16 +245,16 @@ mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
 transform_result     = "terrain_swamp"
-transform_time       = 36
+transform_time       = 190
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "no"
-warmer_drier_result  = "terrain_swamp"
-cooler_wetter_result = "terrain_glacier"
-cooler_drier_result  = "terrain_glacier"
+warmer_drier_result  = "no"
+cooler_wetter_result = "terrain_ice"
+cooler_drier_result  = "terrain_ice"
 native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
-flags                = "Oceanic", "NoCities", "NoPollution", "UnsafeCoast"
+flags                = "Oceanic", "NoCities", "UnsafeCoast"
 property_ocean_depth = 32
 helptext             = _("\
 Shallow oceans are mostly found near coastlines, and are often rich\
@@ -272,7 +272,7 @@ defense_bonus        = 0
 food                 = 1
 shield               = 0
 trade                = 2
-;resources            = "none"
+resources            = "resource_whales"
 road_trade_incr      = 0
 road_time            = 0
 irrigation_result    = "no"
@@ -288,10 +288,10 @@ clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "no"
 warmer_drier_result  = "no"
-cooler_wetter_result = "no"
-cooler_drier_result  = "no"
+cooler_wetter_result = "terrain_ice"
+cooler_drier_result  = "terrain_ice"
 native_to            = "Sea", "Air", "Missile", "Helicopter"
-flags                = "Oceanic", "NoCities", "NoPollution", "UnsafeCoast"
+flags                = "Oceanic", "NoCities", "UnsafeCoast"
 property_ocean_depth = 87
 helptext             = _("\
 Deep oceans cover much of the world away from coastlines, and only\
@@ -318,7 +318,7 @@ mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 10
 transform_result     = "terrain_tundra"
-transform_time       = 24
+transform_time       = 72
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -333,6 +333,44 @@ helptext             = _("\
 Glaciers are found only in the most northerly or southerly\
  reaches of the world.  They are very cold, and hence difficult to\
  work with.\
+")
+
+[terrain_ice]
+name                 = _("Ice")
+graphic              = "ice"
+graphic_alt          = "arctic"
+identifier           = "i"
+movement_cost        = 2
+defense_bonus        = 0
+food                 = 0
+shield               = 0
+trade                = 0
+road_trade_incr      = 0
+road_time            = 0
+irrigation_result    = "no"
+irrigation_food_incr = 0
+irrigation_time      = 0
+mining_result        = "no"
+mining_shield_incr   = 0
+mining_time          = 0
+transform_result     = "terrain_ocean"
+transform_time       = 72
+rail_time            = 3
+clean_pollution_time = 3
+clean_fallout_time   = 3
+warmer_wetter_result = "terrain_ocean"
+warmer_drier_result  = "terrain_lake"
+cooler_wetter_result = "no"
+cooler_drier_result  = "no"
+native_to            = "Air", "Missile", "Helicopter"
+flags                = "NoBarbs", "NoCities" ; "Oceanic", 
+;property_ocean_depth = 32
+property_frozen      = 5
+property_wet         = 1
+property_cold        = 80
+helptext             = _("\
+Ice on sea. Building something on floating ice\
+ would not be a very good idea.\
 ")
 
 [terrain_desert]
@@ -355,13 +393,13 @@ mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 5
 transform_result     = "terrain_plains"
-transform_time       = 24
+transform_time       = 144
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_grassland"
+warmer_wetter_result = "no"
 warmer_drier_result  = "no"
-cooler_wetter_result = "terrain_plains"
+cooler_wetter_result = "terrain_glacier"
 cooler_drier_result  = "terrain_tundra"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
@@ -379,7 +417,7 @@ graphic              = "forest"
 graphic_alt          = "-"
 identifier           = "f"
 movement_cost        = 2
-defense_bonus        = 50
+defense_bonus        = 25
 food                 = 1
 shield               = 2
 trade                = 0
@@ -388,25 +426,64 @@ road_trade_incr      = 0
 road_time            = 4
 irrigation_result    = "terrain_plains"
 irrigation_food_incr = 0
-irrigation_time      = 5
+irrigation_time      = 18
 mining_result        = "terrain_swamp"
 mining_shield_incr   = 0
-mining_time          = 15
+mining_time          = 18
 transform_result     = "terrain_grassland"
-transform_time       = 24
+transform_time       = 108
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_jungle"
-warmer_drier_result  = "terrain_plains"
-cooler_wetter_result = "terrain_swamp"
-cooler_drier_result  = "terrain_tundra"
+warmer_wetter_result = "terrain_swamp"
+warmer_drier_result  = "terrain_desert"
+cooler_wetter_result = "terrain_arctic_forest"
+cooler_drier_result  = "terrain_arctic_forest"
 native_to            = "Land", "Air", "Missile", "Helicopter"
-flags                = "Starter", "CanHaveRiver"
+flags                = "CanHaveRiver"
 property_cold        = 20
 property_wet         = 20
 property_foliage     = 50
 property_temperate   = 50
+helptext             = _("\
+Forests are densely wooded, making agriculture somewhat\
+ problematic.\
+")
+
+[terrain_arctic_forest]
+name                 = _("Arctic Forest")
+graphic              = "arctic_forest"
+graphic_alt          = "forest"
+identifier           = "q"
+movement_cost        = 2
+defense_bonus        = 25
+food                 = 0
+shield               = 2
+trade                = 0
+resources            = "resource_game", "resource_furs"
+road_trade_incr      = 0
+road_time            = 4
+irrigation_result    = "terrain_forest"
+irrigation_food_incr = 0
+irrigation_time      = 18
+mining_result        = "terrain_swamp"
+mining_food_incr     = 0
+mining_shield_incr   = 0
+mining_time          = 18
+transform_result     = "terrain_plains"
+transform_time       = 144
+rail_time            = 3
+clean_pollution_time = 3
+clean_fallout_time   = 3
+warmer_wetter_result = "terrain_forest"
+warmer_drier_result  = "terrain_forest"
+cooler_wetter_result = "terrain_tundra"
+cooler_drier_result  = "terrain_tundra"
+native_to            = "Land", "Air", "Missile", "Helicopter"
+flags                = "NoCities", "CanHaveRiver"
+property_cold        = 90
+property_foliage     = 10
+;property_temperate   = 10
 helptext             = _("\
 Forests are densely wooded, making agriculture somewhat\
  problematic.\
@@ -430,15 +507,15 @@ irrigation_food_incr = 1
 irrigation_time      = 5
 mining_result        = "terrain_forest"
 mining_shield_incr   = 0
-mining_time          = 10
-transform_result     = "terrain_hills"
-transform_time       = 24
+mining_time          = 36
+transform_result     = "terrain_plains"
+transform_time       = 72
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_ocean"
+warmer_wetter_result = "terrain_swamp"
 warmer_drier_result  = "terrain_desert"
-cooler_wetter_result = "terrain_glacier"
+cooler_wetter_result = "terrain_tundra"
 cooler_drier_result  = "terrain_tundra"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
@@ -454,7 +531,7 @@ graphic              = "hills"
 graphic_alt          = "-"
 identifier           = "h"
 movement_cost        = 2
-defense_bonus        = 100
+defense_bonus        = 50
 food                 = 1
 shield               = 0
 trade                = 0
@@ -467,8 +544,8 @@ irrigation_time      = 10
 mining_result        = "yes"
 mining_shield_incr   = 3
 mining_time          = 10
-transform_result     = "terrain_plains"
-transform_time       = 24
+transform_result     = "no"
+transform_time       = 0
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -477,7 +554,7 @@ warmer_drier_result  = "no"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
-flags                = "Starter", "CanHaveRiver"
+flags                = "CanHaveRiver"
 property_green       = 50
 property_mountainous = 30
 helptext             = _("\
@@ -491,7 +568,7 @@ graphic              = "jungle"
 graphic_alt          = "-"
 identifier           = "j"
 movement_cost        = 2
-defense_bonus        = 50
+defense_bonus        = 25
 food                 = 1
 shield               = 0
 trade                = 0
@@ -500,18 +577,18 @@ road_trade_incr      = 0
 road_time            = 4
 irrigation_result    = "terrain_grassland"
 irrigation_food_incr = 0
-irrigation_time      = 15
+irrigation_time      = 36
 mining_result        = "terrain_forest"
 mining_shield_incr   = 0
-mining_time          = 15
+mining_time          = 18
 transform_result     = "terrain_plains"
-transform_time       = 24
+transform_time       = 144
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_ocean"
+warmer_wetter_result = "terrain_swamp"
 warmer_drier_result  = "terrain_desert"
-cooler_wetter_result = "terrain_swamp"
+cooler_wetter_result = "terrain_tundra"
 cooler_drier_result  = "terrain_tundra"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
@@ -529,7 +606,7 @@ graphic              = "mountains"
 graphic_alt          = "-"
 identifier           = "m"
 movement_cost        = 3
-defense_bonus        = 200
+defense_bonus        = 100
 food                 = 0
 shield               = 1
 trade                = 0
@@ -542,8 +619,8 @@ irrigation_time      = 0
 mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 10
-transform_result     = "terrain_hills"
-transform_time       = 24
+transform_result     = "no"
+transform_time       = 0
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -552,7 +629,7 @@ warmer_drier_result  = "no"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
-flags                = "CanHaveRiver"
+flags                = "CanHaveRiver", "NoCities"
 property_mountainous = 70
 helptext             = _("\
 Mountains are regions of extreme altitude, making agriculture and\
@@ -577,15 +654,15 @@ irrigation_food_incr = 1
 irrigation_time      = 5
 mining_result        = "terrain_forest"
 mining_shield_incr   = 0
-mining_time          = 15
+mining_time          = 18
 transform_result     = "terrain_grassland"
-transform_time       = 24
+transform_time       = 144
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_ocean"
+warmer_wetter_result = "terrain_swamp"
 warmer_drier_result  = "terrain_desert"
-cooler_wetter_result = "terrain_glacier"
+cooler_wetter_result = "terrain_tundra"
 cooler_drier_result  = "terrain_tundra"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
@@ -602,7 +679,7 @@ graphic              = "swamp"
 graphic_alt          = "-"
 identifier           = "s"
 movement_cost        = 2
-defense_bonus        = 50
+defense_bonus        = 25
 food                 = 1
 shield               = 0
 trade                = 0
@@ -611,21 +688,21 @@ road_trade_incr      = 0
 road_time            = 4
 irrigation_result    = "terrain_grassland"
 irrigation_food_incr = 0
-irrigation_time      = 15
+irrigation_time      = 54
 mining_result        = "terrain_forest"
 mining_shield_incr   = 0
-mining_time          = 15
+mining_time          = 36
 transform_result     = "terrain_ocean"
-transform_time       = 36
+transform_time       = 190
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "terrain_ocean"
-warmer_drier_result  = "terrain_desert"
-cooler_wetter_result = "terrain_glacier"
-cooler_drier_result  = "terrain_tundra"
+warmer_drier_result  = "terrain_jungle"
+cooler_wetter_result = "terrain_tundra"
+cooler_drier_result  = "terrain_arctic_forest"
 native_to            = "Land", "Air", "Missile", "Helicopter"
-flags                = "CanHaveRiver"
+flags                = "NoCities", "CanHaveRiver"
 property_wet         = 100
 property_tropical    = 10
 property_temperate   = 10
@@ -651,18 +728,18 @@ road_time            = 2
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 5
-mining_result        = "no"
+mining_result        = "terrain_arctic_forest"
 mining_shield_incr   = 0
-mining_time          = 0
-transform_result     = "terrain_desert"
-transform_time       = 24
+mining_time          = 18
+transform_result     = "terrain_plains"
+transform_time       = 144
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_ocean"
+warmer_wetter_result = "terrain_swamp"
 warmer_drier_result  = "terrain_desert"
 cooler_wetter_result = "terrain_glacier"
-cooler_drier_result  = "no"
+cooler_drier_result  = "terrain_glacier"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "NoBarbs", "CanHaveRiver"
 property_cold        = 50
@@ -896,8 +973,6 @@ shield      = 3 ; glacier used to have 4
 ; conflicts               = List of bases that cannot be on the same tile.
 ;                           Bases with non-zero border_sq automatically conflict
 ;                           with each other.
-; native_to               = List of unit classes that are considered to
-;                           be inside the base when they are on same tile
 ; flags
 ;   - "NoAggressive"      = Units inside are not considered aggressive
 ;   - "NoStackDeath"      = Units inside do not die all at once when attacked
@@ -921,8 +996,8 @@ reqs           =
       "UnitFlag", "Settlers", "Local"
     }
 gui_type       = "Fortress"
-build_time     = 3
-defense_bonus  = 100
+build_time     = 6
+defense_bonus  = 50
 border_sq      = 5
 native_to      = "Land"
 flags          = "NoAggressive", "NoStackDeath", "DiplomatDefense"
@@ -945,9 +1020,9 @@ reqs           =
       "UnitFlag", "Airbase", "Local"
     }
 gui_type       = "Airbase"
-build_time     = 3
+build_time     = 6
 native_to      = "Air", "Helicopter", "Missile"
-flags          = "NoStackDeath", "ParadropFrom"
+flags          = "NoStackDeath", "DiplomatDefense", "ParadropFrom"
 helptext       = _("\
 Airbases allow your air units to land and refuel. Air units in an \
 airbase may be attacked by land units.\
@@ -965,7 +1040,8 @@ reqs           =
       "UnitFlag", "Airbase", "Local"
     }
 gui_type       = "Fortress"
-build_time     = 3
+buildable      = 0
+build_time     = 6
 border_sq      = 0
 vision_main_sq = 5
 helptext       = _("\

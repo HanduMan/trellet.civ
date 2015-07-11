@@ -74,7 +74,7 @@ reqs    =
 ; Vision benefit from fortress watchtowers
 [effect_fortress_vision]
 name    = "Unit_Vision_Radius_Sq"
-value   = 8
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Base", "Fortress", "tile"
@@ -97,9 +97,9 @@ reqs    =
     }
 
 ; Base vision range - radius of vision is sqrt(5) = 2.24
-[effect_city_vision]
-name    = "City_Vision_Radius_Sq"
-value   = 5
+;[effect_city_vision]
+;name    = "City_Vision_Radius_Sq"
+;value   = 5
 
 
 ; Nuclear power gives +1 moves to sea units
@@ -257,19 +257,20 @@ reqs   =
 
 [effect_upkeep_free_units_anarchy]
 name	= "Unit_Upkeep_Free_Per_City"
-value	= 3
+value	= 1000
 reqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "OutputType", "Shield", "Local"
     }
 
-[effect_upkeep_free_units_despotism]
+[effect_upkeep_free_units_despotism_0]
 name	= "Unit_Upkeep_Free_Per_City"
-value	= 3
+value	= 1
 reqs   =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"
+	   "MinSize", "1", "City"
       "OutputType", "Shield", "Local"
     }
 
@@ -410,8 +411,6 @@ reqs	=
     { "type",       "name",      "range"
       "Gov", "Monarchy", "Player"
     }
-
-; Empire_Size_Step disabled for Communism
 
 [effect_empire_size_step_3]
 name    = "Empire_Size_Step"
@@ -763,7 +762,7 @@ reqs	=
 
 [effect_aqueduct_health]
 name	= "Health_Pct"
-value	= 50
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Aqueduct", "City"
@@ -898,7 +897,7 @@ nreqs	=
 
 [effect_city_walls]
 name	= "Defend_Bonus"
-value	= 200
+value	= 100
 reqs	=
     { "type", "name", "range"
       "Building", "City Walls", "City"
@@ -911,7 +910,7 @@ nreqs	=
 
 [effect_city_walls_0]
 name	= "Defend_Bonus"
-value	= 200
+value	= 100
 reqs	=
     { "type", "name", "range"
       "Building", "City Walls", "City"
@@ -940,7 +939,7 @@ reqs	=
 
 [effect_coastal_defense]
 name	= "Defend_Bonus"
-value	= 100
+value	= 50
 reqs	=
     { "type", "name", "range"
       "Building", "Coastal Defense", "City"
@@ -949,7 +948,7 @@ reqs	=
 
 [effect_coastal_defense_trireme]
 name	= "Defend_Bonus"
-value	= 100
+value	= 50
 reqs	=
     { "type", "name", "range"
       "Building", "Coastal Defense", "City"
@@ -1474,7 +1473,7 @@ reqs	=
 
 [effect_sam_battery]
 name	= "Defend_Bonus"
-value	= 100
+value	= 50
 reqs	=
     { "type", "name", "range"
       "Building", "SAM Battery", "City"
@@ -1491,7 +1490,7 @@ reqs	=
 
 [effect_sdi_defense_1]
 name	= "Defend_Bonus"
-value	= 100
+value	= 50
 reqs	=
     { "type", "name", "range"
       "Building", "SDI Defense", "City"
@@ -1768,7 +1767,7 @@ reqs	=
 
 [effect_great_wall]
 name	= "Defend_Bonus"
-value	= 200
+value	= 100
 reqs	=
     { "type", "name", "range"
       "Building", "Great Wall", "Player"
@@ -1778,7 +1777,7 @@ reqs	=
 
 [effect_great_wall_0]
 name	= "Defend_Bonus"
-value	= 200
+value	= 100
 reqs	=
     { "type", "name", "range"
       "Building", "Great Wall", "Player"
@@ -1809,14 +1808,10 @@ reqs	=
     { "type", "name", "range"
       "Building", "Hanging Gardens", "Player"
     }
-nreqs   =
-    { "type", "name", "range"
-      "Building", "Hanging Gardens", "City"
-    }
 
 [effect_hanging_gardens_1]
 name	= "Make_Happy"
-value	= 3
+value	= 2
 reqs	=
     { "type", "name", "range"
       "Building", "Hanging Gardens", "City"
@@ -2131,13 +2126,13 @@ reqs    =
       "Tech", "Flight", "Player"
     }
     
-[effect_railroad_trade_revenue_reduce]
-name    = "Trade_Revenue_Bonus"
-value   = -585
-reqs    =
-    { "type", "name", "range"
-      "Tech", "Railroad", "Player"
-    }
+;[effect_railroad_trade_revenue_reduce]
+;name    = "Trade_Revenue_Bonus"
+;value   = -585
+;reqs    =
+;    { "type", "name", "range"
+;      "Tech", "Railroad", "Player"
+;    }
 
 [effect_calendar_base]
 name    = "Turn_Years"
@@ -2210,3 +2205,543 @@ value   = 1
 [effect_city_build_slots_basic]
 name    = "City_Build_Slots"
 value   = 1
+
+; Base vision range - radius of vision is sqrt(2) = 1.41
+[effect_city_vision_0]
+name    = "City_Vision_Radius_Sq"
+value   = 2
+
+; City radius 2 - radius is sqrt(2+3) = 2.24
+[effect_city_radius_1]
+name    = "City_Radius_Sq"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "3", "City"
+    }
+
+; City radius 2 - radius of vision is sqrt(2+3) = 2.24
+[effect_city_vision_1]
+name    = "City_Vision_Radius_Sq"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "3", "City"
+    }
+
+; City radius 3 - radius is sqrt(2+3+5) = 3.16
+[effect_city_radius_2]
+name    = "City_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "10", "City"
+      "Tech", "Railroad", "Player"
+    }
+
+; City radius 3 - radius of vision is sqrt(2+3+5) = 3.16
+[effect_city_vision_2]
+name    = "City_Vision_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "10", "City"
+      "Tech", "Railroad", "Player"
+    }
+
+; City radius 3 - (1)+1 build slots
+[effect_city_build_slots_3]
+name    = "City_Build_Slots"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "10", "City"
+      "Tech", "Railroad", "Player"
+    }
+
+; City radius 4 - radius is sqrt(2+3+5+7) = 4.12
+[effect_city_radius_3]
+name    = "City_Radius_Sq"
+value   = 7
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "30", "City"
+      "Tech", "Railroad", "Player"
+      "Building", "Mass Transit", "City"
+      "Building", "Super Highways", "City"
+    }
+
+; City radius 4 - radius of vision is sqrt(2+3+5+7) = 4.12
+[effect_city_vision_3]
+name    = "City_Vision_Radius_Sq"
+value   = 7
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "30", "City"
+      "Tech", "Railroad", "Player"
+      "Building", "Mass Transit", "City"
+      "Building", "Super Highways", "City"
+    }
+
+; City radius 4 - (1+1)+1 build slots
+[effect_city_build_slots_4]
+name    = "City_Build_Slots"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "30", "City"
+      "Tech", "Railroad", "Player"
+      "Building", "Mass Transit", "City"
+      "Building", "Super Highways", "City"
+    }
+
+; Trellet.civ special effects
+;*****************************
+
+;[effect_labour]
+;name    = "Specialist_Output"
+;value   = 2
+;reqs    =
+;    { "type", "name", "range"
+;      "Specialist", "labour", "Local"
+;      "OutputType", "shield", "Local"
+;    }
+
+; Airbase HP regen for air units
+[effect_airbase_hp_regen_a]
+name    = "HP_Regen"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Base", "Airbase", "Tile"
+      "UnitClass", "Air", "Local"
+    }
+
+; Airbase HP regen for helicopter units
+[effect_airbase_hp_regen_h]
+name    = "HP_Regen"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Base", "Airbase", "Tile"
+      "UnitClass", "Helicopter", "Local"
+    }
+
+[effect_hospital_health]
+name	= "Health_Pct"
+value	= 30
+reqs	=
+    { "type", "name", "range"
+      "Building", "Hospital", "City"
+    }
+
+[effect_university_hospital_health]
+name	= "Health_Pct"
+value	= 10
+reqs	=
+    { "type", "name", "range"
+      "Building", "Hospital", "City"
+      "Building", "University", "City"
+    }
+
+[effect_nuke_OK]
+name   = "Enable_Nuke"
+value   = 1
+
+[effect_migration_small_town_bonus]
+name	= "Migration_Pct"
+value	= 33
+reqs	=
+    { "type", "name", "range"
+      "MinSize", "1", "City"
+    }
+
+[effect_migration_small_town_bonus_0]
+name	= "Migration_Pct"
+value	= -33
+reqs	=
+    { "type", "name", "range"
+      "MinSize", "2", "City"
+    }
+    
+[effect_upkeep_free_units_despotism_1]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "2", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "3", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_3]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "4", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_4]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "5", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_5]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "6", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_6]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "7", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_7]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "8", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_8]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "9", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_9]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "10", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_10]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "11", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_11]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "12", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_12]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "13", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_13]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "14", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_14]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "15", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_15]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "16", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_16]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "17", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_17]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "18", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_18]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "19", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_19]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "20", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_20]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "21", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_21]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "22", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_22]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "23", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_23]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "24", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_24]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "25", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_25]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "26", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_26]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "27", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_27]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "28", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_28]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "29", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_29]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "30", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_30]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "31", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_31]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "32", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_32]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "33", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_33]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "34", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_34]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "35", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_35]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "36", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_36]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "37", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_37]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+	   "MinSize", "38", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+; Something should be done for progressively slowing down
+; the research speed towards the end of the game
+; This could be one thing but it might cause all
+; nations to research techs in particular order...not good.
+;[effect_tech_cost_harder]
+;name    = "Tech_Cost_Factor"
+;value   = 1,1
+;reqs    =
+;    { "type", "name", "range"
+;      "Tech", "Science", "Player"
+;    }
