@@ -57,6 +57,283 @@ options="+Freeciv-2.5-ruleset"
 ;
 ; */ <-- avoid gettext warnings
 
+[building_apollo_program]
+name		= _("Apollo Program")
+genus		= "SmallWonder"
+flags		= "SaveSmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Space Flight", "Player"
+    }
+graphic	= "b.apollo_program"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_apollo_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+Allows you to start building spaceship parts in cities\
+ with factories (assuming you have researched the necessary\
+ technologies).\
+")
+
+[building_colossus]
+name		= _("Colossus")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Bronze Working", "Player"
+    }
+graphic	= "b.colossus"
+graphic_alt	= "-"
+obsolete_by	= "Automobile"
+build_cost	= 80
+upkeep		= 0
+sabotage	= 0
+sound		= "w_colossus"
+sound_alt	= "w_generic"
+helptext	= _("\
+Each tile around the city where this wonder is built that is already\
+ generating some trade produces one extra trade resource.\
+")
+
+[building_copernicus_observatory]
+name		= _("Copernicus' Observatory")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Astronomy", "Player"
+    }
+graphic	= "b.copernicus_observatory"
+graphic_alt	= "-"
+obsolete_by	= "Computers"
+build_cost	= 100
+upkeep		= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Each worked tile in the city where this wonder is built produces\
+ one extra science bulb.\
+")
+
+[building_cure_for_cancer]
+name		= _("Cure For Cancer")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Genetic Engineering", "Player"
+    }
+graphic	= "b.cure_for_cancer"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 1000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_cure_for_cancer"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+This stunning technological achievement makes one content\
+ citizen happy in each of your cities (2 extra luxury per\
+ city).  It further reduces the possibility for an illness\
+ in the city (-10%).\
+")
+; NB: In Civ2 this makes 1 content citizen happy in all cities.
+
+[building_hanging_gardens]
+name		= _("Hanging Gardens")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Pottery", "Player"
+    }
+graphic	= "b.hanging_gardens"
+graphic_alt	= "-"
+obsolete_by	= "Electricity"
+build_cost	= 90
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hanging_gardens"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes one unhappy citizen content in every city. \
+ And creates 4 extra luxuries in the city where it is located.\
+")
+
+[building_js_bachs_cathedral]
+name		= _("J.S. Bach's Cathedral")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theology", "Player"
+    }
+graphic	= "b.js_bachs_cathedral"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_js_bachs_cathedral"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes one content citizen happy in every city (2 extra luxury\
+ per city).\
+")
+
+[building_king_richards_crusade]
+name		= _("King Richard's Crusade")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Chivalry", "Player"
+    }
+graphic	= "b.king_richards_crusade"
+graphic_alt	= "-"
+obsolete_by	= "Communism"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_king_richards_crusade"
+sound_alt	= "w_generic"
+helptext	= _("\
+It neutralises the unhappiness caused by 1 aggressively\
+ deployed military unit per city.  Under Monarchy government,\
+ it neutralises all the unhappiness caused by military units.\
+")
+
+[building_leonardos_workshop]
+name		= _("Leonardo's Workshop")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Invention", "Player"
+    }
+graphic	= "b.leonardos_workshop"
+graphic_alt	= "-"
+obsolete_by	= "Automobile"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_leonardos_workshop"
+sound_alt	= "w_generic"
+helptext	= _("\
+Upgrades two obsolete units per turn.\
+")
+
+[building_lighthouse]
+name		= _("Lighthouse")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Map Making", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.lighthouse"
+graphic_alt	= "-"
+obsolete_by	= "Magnetism"
+build_cost	= 100
+upkeep		= 0
+sabotage	= 0
+sound		= "w_lighthouse"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives all your sea units 1 additional movement point.\
+")
+
+[building_magellans_expedition]
+name		= _("Magellan's Expedition")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Navigation", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.magellans_expedition"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 800
+upkeep		= 0
+sabotage	= 0
+sound		= "w_magellans_expedition"
+sound_alt	= "w_generic"
+helptext	= _("\
+All your new sea units built in cities on the same continent start at\
+ the first veteran level.\
+")
+
+[building_marco_polos_embassy]
+name		= _("Marco Polo's Embassy")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Trade", "Player"
+    }
+graphic	= "b.marco_polos_embassy"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 800
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases trade output by 40% in all cities owned by the\
+ player.\
+")
+
+[building_michelangelos_chapel]
+name		= _("Michelangelo's Chapel")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monotheism", "Player"
+    }
+graphic	= "b.michelangelos_chapel"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 800
+upkeep		= 0
+sabotage	= 0
+sound		= "w_michelangelos_chapel"
+sound_alt	= "w_generic"
+helptext	= _("\
+Counts as having a Cathedral in each of your cities.\
+ This makes 3 unhappy citizens content in each city;\
+ however, it does not affect citizens made unhappy by military activity.\
+ The discovery of Theology increases the effect of a Cathedral,\
+ making an additional unhappy citizen content. The discovery of\
+ Communism lessens the effect of a Cathedral, reducing by one\
+ the number of unhappy citizens made content.\
+")
+
+[building_pyramids]
+name		= _("Pyramids")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Masonry", "Player"
+    }
+graphic	= "b.pyramids"
+graphic_alt	= "-"
+obsolete_by	= "Railroad"
+build_cost	= 100
+upkeep		= 0
+sabotage	= 0
+sound		= "w_pyramids"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Each tile around the city where this wonder is built that is already\
+ generating some shield produces one extra shield resource. \
+ Under Despotism or Tribal governments, the Pyramids cancel the penalty\
+ from worked tiles with output greater than 2.\
+")
+
 [building_airport]
 name		= _("Airport")
 genus		= "Improvement"
@@ -1105,30 +1382,6 @@ helptext	= _("\
 Allows you to build nukes!\
 ")
 
-[building_apollo_program]
-name		= _("Apollo Program")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Space Flight", "Player"
-	  "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.apollo_program"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 600
-upkeep		= 0
-sabotage	= 0
-sound		= "w_apollo_program"
-sound_alt	= "w_generic"
-helptext	= _("\
-The entire map becomes permanently visible to the player who owns it\
- -- the player always has up-to-date knowledge of all terrain and\
- cities (but not units) despite fog-of-war. It allows all players to\
- start building spaceship parts (assuming they have researched the\
- necessary technologies).\
-")
-
 [building_asmiths_trading_co]
 name		= _("A.Smith's Trading Co.")
 genus		= "GreatWonder"
@@ -1150,72 +1403,6 @@ City improvements which would normally have an upkeep of 1 are free\
  of upkeep, for all your cities.\
 ")
 
-[building_colossus]
-name		= _("Colossus")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Bronze Working", "Player"
-	  "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.colossus"
-graphic_alt	= "-"
-obsolete_by	= "Flight"
-build_cost	= 100
-upkeep		= 0
-sabotage	= 0
-sound		= "w_colossus"
-sound_alt	= "w_generic"
-helptext	= _("\
-Each tile around the city where this wonder is built that is already\
- generating some trade produces one extra trade resource.\
-")
-
-[building_copernicus_observatory]
-name		= _("Copernicus' Observatory")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Astronomy", "Player"
-	  "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.copernicus_observatory"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 200
-upkeep		= 0
-sabotage	= 0
-sound		= "w_copernicus_observatory"
-sound_alt	= "w_generic"
-; /* xgettext:no-c-format */
-helptext	= _("\
-Boosts science production by 100% in the city where it is built.\
-")
-
-[building_cure_for_cancer]
-name		= _("Cure For Cancer")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Genetic Engineering", "Player"
-	  "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.cure_for_cancer"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 600
-upkeep		= 0
-sabotage	= 0
-sound		= "w_cure_for_cancer"
-sound_alt	= "w_generic"
-helptext	= _("\
-This stunning technological achievement makes one unhappy\
- citizen content in each of your cities (including citizens unhappy\
- about military activity). It further reduces the possibility for\
- an illness in the city.\
-")
-; NB: In Civ2 this makes 1 content citizen happy in all cities.
-; NB: plague (illness) has to be activated in the ruleset
 
 [building_darwins_voyage]
 name		= _("Darwin's Voyage")
@@ -1305,31 +1492,6 @@ Works as a City Wall in all your cities.\
 ; Civ2 also doubles attack -vs- barbs,
 ; and enemies are forced to offer cease-fire or peace.
 
-[building_hanging_gardens]
-name		= _("Hanging Gardens")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Pottery", "Player"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.hanging_gardens"
-graphic_alt	= "-"
-obsolete_by	= "Railroad"
-build_cost	= 200
-upkeep		= 0
-sabotage	= 0
-sound		= "w_hanging_gardens"
-sound_alt	= "w_generic"
-helptext	= _("\
-Makes one content citizen happy in every city. Makes two extra\
- content citizens happy in the city containing the Hanging Gardens\
- (that is, a total of 3). In the unlikely event where there are no\
- content citizens to get the effect of Hanging Gardens, the wonder\
- applies to unhappy citizens (including those unhappy about military\
- activity), making each content then happy.\
-")
-
 [building_hoover_dam]
 name		= _("Hoover Dam")
 genus		= "GreatWonder"
@@ -1374,110 +1536,6 @@ Boosts science production by 100% in every city you control that\
  has a University.\
 ")
 
-[building_js_bachs_cathedral]
-name		= _("J.S. Bach's Cathedral")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Theology", "Player"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.js_bachs_cathedral"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 400
-upkeep		= 0
-sabotage	= 0
-sound		= "w_js_bachs_cathedral"
-sound_alt	= "w_generic"
-helptext	= _("\
-Makes two unhappy citizens content in every city (including citizens\
- unhappy about military activity).\
-")
-
-[building_king_richards_crusade]
-name		= _("King Richard's Crusade")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Engineering", "Player"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.king_richards_crusade"
-graphic_alt	= "-"
-obsolete_by	= "Robotics"
-build_cost	= 150
-upkeep		= 0
-sabotage	= 0
-sound		= "w_king_richards_crusade"
-sound_alt	= "w_generic"
-helptext	= _("\
-Adds one extra shield resource on every tile around the city\
- where it is built.\
-")
-
-[building_leonardos_workshop]
-name		= _("Leonardo's Workshop")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Invention", "Player"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.leonardos_workshop"
-graphic_alt	= "-"
-obsolete_by	= "Automobile"
-build_cost	= 400
-upkeep		= 0
-sabotage	= 0
-sound		= "w_leonardos_workshop"
-sound_alt	= "w_generic"
-helptext	= _("\
-Upgrades one obsolete unit per game turn.\
-")
-
-[building_lighthouse]
-name		= _("Lighthouse")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Map Making", "Player"
-      "TerrainClass", "Oceanic", "Adjacent"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.lighthouse"
-graphic_alt	= "-"
-obsolete_by	= "Magnetism"
-build_cost	= 200
-upkeep		= 0
-sabotage	= 0
-sound		= "w_lighthouse"
-sound_alt	= "w_generic"
-helptext	= _("\
-Gives all your sea units 1 additional movement point. Makes all your\
- new military sea units veterans (for all your cities).\
-")
-
-[building_magellans_expedition]
-name		= _("Magellan's Expedition")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Navigation", "Player"
-      "TerrainClass", "Oceanic", "Adjacent"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.magellans_expedition"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 400
-upkeep		= 0
-sabotage	= 0
-sound		= "w_magellans_expedition"
-sound_alt	= "w_generic"
-helptext	= _("\
-Gives all your sea units 2 additional movement points.\
-")
 
 [building_manhattan_project]
 name		= _("Manhattan Project")
@@ -1498,51 +1556,8 @@ sound_alt	= "w_generic"
 ;helptext is set in client/helpdata.c:helptext_wonder()
 ;helptext	=
 
-[building_marco_polos_embassy]
-name		= _("Marco Polo's Embassy")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Trade", "Player"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.marco_polos_embassy"
-graphic_alt	= "-"
-obsolete_by	= "Communism"
-build_cost	= 200
-upkeep		= 0
-sabotage	= 0
-sound		= "w_marco_polos_embassy"
-sound_alt	= "w_generic"
-helptext	= _("\
-The player who owns it gets an embassy with all players.\
-")
 
-[building_michelangelos_chapel]
-name		= _("Michelangelo's Chapel")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Monotheism", "Player"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.michelangelos_chapel"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 400
-upkeep		= 0
-sabotage	= 0
-sound		= "w_michelangelos_chapel"
-sound_alt	= "w_generic"
-helptext	= _("\
-Counts as having a Cathedral in each of your cities.  This makes 3\
- unhappy citizens content in each city; however, it does not affect\
- citizens made unhappy by military activity.  The discovery of Theology\
- increases the effect of a Cathedral, making an additional unhappy\
- citizen content.  The discovery of Communism lessens the effect of\
- a Cathedral, reducing by one the number of unhappy citizens made\
- content.\
-")
+
 
 [building_oracle]
 name		= _("Oracle")
@@ -1564,29 +1579,6 @@ helptext	= _("\
 Makes two additional unhappy citizens content in every city with\
  a Temple.  Does not affect citizens made unhappy by military\
  activity.\
-")
-
-[building_pyramids]
-name		= _("Pyramids")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Masonry", "Player"
-      "Tech", "Wonder Building", "Player"
-    }
-graphic	= "b.pyramids"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 200
-upkeep		= 0
-sabotage	= 0
-sound		= "w_pyramids"
-sound_alt	= "w_generic"
-; /* xgettext:no-c-format */
-helptext	= _("\
-The amount of stored food lost when one of your cities grows or shrinks\
- is reduced by 25%.  This helps a city to grow faster and more easily\
- withstand famine.  Cumulative with Granary.\
 ")
 
 [building_seti_program]

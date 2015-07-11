@@ -1200,7 +1200,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local"
       "TerrainClass", "Land", "Local"
     }
-move_cost      = 1
+move_cost      = 2
 build_time     = 3
 food_incr      = 0
 shield_incr    = 0

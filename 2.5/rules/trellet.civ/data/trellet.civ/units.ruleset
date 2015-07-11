@@ -1640,10 +1640,11 @@ An improved Bomber, with improved attack and a higher movement\
 
 ; Trellet.civ
 [unit_flotilla]
-name          = _("Flotilla")
+name          = _("Flotilla (non-mil)")
+rule_name     = _("Flotilla")
 class         = "Trireme"
 tech_req      = "Map Making"
-obsolete_by   = "Galleon"
+obsolete_by   = "Caravel"
 graphic       = "u.flotilla"
 graphic_alt   = "u.trireme"
 sound_move    = "m_trireme"
@@ -1656,7 +1657,7 @@ attack        = 0
 defense       = 1
 hitpoints     = 10
 firepower     = 1
-move_rate     = 3
+move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 2
 fuel          = 0
@@ -1675,10 +1676,11 @@ The Flotilla is your first boat unit. It can act\
 
 [unit_trireme]
 ; /* TRANS: unit type */
-name          = _("Trireme")
+name          = _("Trireme (mil)")
+rule_name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
-obsolete_by   = "Caravel"
+obsolete_by   = "Galleon"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -1691,7 +1693,7 @@ attack        = 1
 defense       = 1
 hitpoints     = 10
 firepower     = 1
-move_rate     = 3
+move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 2
 fuel          = 0
@@ -1710,7 +1712,8 @@ The Trireme is your first boat unit. It can act\
 ")
 
 [unit_caravel]
-name          = _("Caravel")
+name          = _("Caravel (non-mil)")
+rule_name          = _("Caravel")
 class         = "Sea"
 tech_req      = "Navigation"
 obsolete_by   = "Transport"
@@ -1726,8 +1729,8 @@ attack        = 0
 defense       = 1
 hitpoints     = 10
 firepower     = 1
-move_rate     = 3
-vision_radius_sq = 2
+move_rate     = 5
+vision_radius_sq = 8
 transport_cap = 3
 fuel          = 0
 uk_happy      = 1
@@ -1738,12 +1741,13 @@ cargo         = "Civilian"
 flags         = "BadCityDefender", "NonMil"
 roles         = "Ferryboat"
 helptext      = _("\
-The Caravel replaces the Trireme and can enter\
+The Caravel replaces the Flotilla and can enter\
  any ocean tile.\
 ")
 
 [unit_galleon]
-name          = _("Galleon")
+name          = _("Galleon (mil)")
+rule_name          = _("Galleon")
 class         = "Sea"
 tech_req      = "Magnetism"
 obsolete_by   = "Military Transport"
@@ -1759,8 +1763,8 @@ attack        = 1
 defense       = 2
 hitpoints     = 20
 firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
+move_rate     = 6
+vision_radius_sq = 8
 transport_cap = 4
 fuel          = 0
 uk_happy      = 0
@@ -1778,6 +1782,7 @@ The Galleon is a pure transport ship and cannot\
 
 [unit_frigate]
 name          = _("Frigate")
+rule_name          = _("Frigate (mil)")
 class         = "Sea"
 tech_req      = "Magnetism"
 obsolete_by   = "Ironclad"
@@ -1793,8 +1798,8 @@ attack        = 4
 defense       = 2
 hitpoints     = 20
 firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
+move_rate     = 6
+vision_radius_sq = 8
 transport_cap = 2
 fuel          = 0
 uk_happy      = 1
@@ -1827,8 +1832,8 @@ attack        = 4
 defense       = 4
 hitpoints     = 30
 firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
+move_rate     = 6
+vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
@@ -1860,8 +1865,8 @@ attack        = 4
 defense       = 4
 hitpoints     = 30
 firepower     = 2
-move_rate     = 6
-vision_radius_sq = 8
+move_rate     = 9
+vision_radius_sq = 15
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
@@ -1894,8 +1899,8 @@ attack        = 6
 defense       = 6
 hitpoints     = 30
 firepower     = 2
-move_rate     = 5
-vision_radius_sq = 8
+move_rate     = 7
+vision_radius_sq = 15
 transport_cap = 1
 fuel          = 0
 uk_happy      = 1
@@ -1926,8 +1931,8 @@ attack        = 8
 defense       = 8
 hitpoints     = 30
 firepower     = 2
-move_rate     = 5
-vision_radius_sq = 8
+move_rate     = 7
+vision_radius_sq = 15
 transport_cap = 1
 fuel          = 0
 uk_happy      = 1
@@ -1964,8 +1969,8 @@ attack        = 18
 defense       = 8
 hitpoints     = 40
 firepower     = 2
-move_rate     = 4
-vision_radius_sq = 8
+move_rate     = 5
+vision_radius_sq = 15
 transport_cap = 1
 fuel          = 0
 uk_happy      = 1
@@ -1997,8 +2002,8 @@ attack        = 12
 defense       = 2
 hitpoints     = 30
 firepower     = 2
-move_rate     = 5
-vision_radius_sq = 8
+move_rate     = 7
+vision_radius_sq = 15
 transport_cap = 8
 fuel          = 0
 uk_happy      = 1
@@ -2032,8 +2037,8 @@ attack        = 1
 defense       = 6
 hitpoints     = 40
 firepower     = 2
-move_rate     = 5
-vision_radius_sq = 8
+move_rate     = 7
+vision_radius_sq = 15
 transport_cap = 8
 fuel          = 0
 uk_happy      = 1
@@ -2052,7 +2057,8 @@ TIP:  Guard Carriers with a handful of fast-moving ships and a\
 ")
 
 [unit_transport]
-name          = _("Transport")
+name          = _("Transport (non-mil)")
+rule_name          = _("Transport")
 class         = "Sea"
 tech_req      = "Industrialization"
 obsolete_by   = "None"
@@ -2068,8 +2074,8 @@ attack        = 0
 defense       = 3
 hitpoints     = 30
 firepower     = 1
-move_rate     = 5
-vision_radius_sq = 8
+move_rate     = 8
+vision_radius_sq = 15
 transport_cap = 8
 fuel          = 0
 uk_happy      = 0
@@ -2086,7 +2092,8 @@ The Transport cannot attack on its own but\
 
 ; Trellet.civ
 [unit_mil_transport]
-name          = _("Military Transport")
+name          = _("Transport (mil)")
+rule_name          = _("Military Transport")
 class         = "Sea"
 tech_req      = "Industrialization"
 obsolete_by   = "None"
@@ -2102,8 +2109,8 @@ attack        = 0
 defense       = 3
 hitpoints     = 30
 firepower     = 1
-move_rate     = 5
-vision_radius_sq = 8
+move_rate     = 8
+vision_radius_sq = 15
 transport_cap = 8
 fuel          = 0
 uk_happy      = 1
@@ -2253,7 +2260,7 @@ TIP 2:  You may be involved in a situation where you've invaded an\
 
 [unit_diplomat]
 name          = _("Diplomat")
-class         = "Land"
+class         = "Civilian"
 tech_req      = "Writing"
 obsolete_by   = "Spy"
 graphic       = "u.diplomat"
@@ -2362,7 +2369,7 @@ Diplomats built under a Communist government will start at the first\
 
 [unit_spy]
 name          = _("Spy")
-class         = "Land"
+class         = "Civilian"
 tech_req      = "Espionage"
 obsolete_by   = "None"
 graphic       = "u.spy"
@@ -2530,8 +2537,8 @@ attack        = 0
 defense       = 1
 hitpoints     = 10
 firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
+move_rate     = 3
+vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
