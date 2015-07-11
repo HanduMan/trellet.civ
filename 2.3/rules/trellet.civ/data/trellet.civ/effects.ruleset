@@ -2354,6 +2354,10 @@ reqs	=
 name   = "Enable_Nuke"
 value   = 1
 
+[effect_space_race]
+name	= "Enable_Space"
+value	= 1
+
 ;[effect_migration_small_town_bonus]
 ;name	= "Migration_Pct"
 ;value	= 33
