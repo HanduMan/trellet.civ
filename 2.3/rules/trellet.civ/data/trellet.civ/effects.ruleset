@@ -2242,7 +2242,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
       "MinSize", "16", "City"
-      "Tech", "Industrialization", "Player"
+      "Tech", "Railroad", "Player"
     }
 
 ; City radius 3 - radius of vision is sqrt(2+3+5) = 3.16
@@ -2252,7 +2252,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
       "MinSize", "16", "City"
-      "Tech", "Industrialization", "Player"
+      "Tech", "Railroad", "Player"
     }
 
 ; City radius 3 - (1)+1 build slots
@@ -2262,7 +2262,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "MinSize", "16", "City"
-      "Tech", "Industrialization", "Player"
+      "Tech", "Railroad", "Player"
     }
 
 ; City radius 4 - radius is sqrt(2+3+5+7) = 4.12
