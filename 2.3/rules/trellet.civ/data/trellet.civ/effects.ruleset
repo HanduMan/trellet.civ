@@ -412,6 +412,8 @@ reqs	=
       "Gov", "Monarchy", "Player"
     }
 
+; Empire_Size_Step disabled for Communism
+
 [effect_empire_size_step_3]
 name    = "Empire_Size_Step"
 value   = 14
@@ -1808,10 +1810,14 @@ reqs	=
     { "type", "name", "range"
       "Building", "Hanging Gardens", "Player"
     }
+nreqs   =
+    { "type", "name", "range"
+      "Building", "Hanging Gardens", "City"
+    }
 
 [effect_hanging_gardens_1]
 name	= "Make_Happy"
-value	= 2
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Hanging Gardens", "City"
@@ -2235,8 +2241,8 @@ name    = "City_Radius_Sq"
 value   = 5
 reqs    =
     { "type", "name", "range"
-      "MinSize", "10", "City"
-      "Tech", "Railroad", "Player"
+      "MinSize", "16", "City"
+      "Tech", "Industrialization", "Player"
     }
 
 ; City radius 3 - radius of vision is sqrt(2+3+5) = 3.16
@@ -2245,8 +2251,8 @@ name    = "City_Vision_Radius_Sq"
 value   = 5
 reqs    =
     { "type", "name", "range"
-      "MinSize", "10", "City"
-      "Tech", "Railroad", "Player"
+      "MinSize", "16", "City"
+      "Tech", "Industrialization", "Player"
     }
 
 ; City radius 3 - (1)+1 build slots
@@ -2255,8 +2261,8 @@ name    = "City_Build_Slots"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "MinSize", "10", "City"
-      "Tech", "Railroad", "Player"
+      "MinSize", "16", "City"
+      "Tech", "Industrialization", "Player"
     }
 
 ; City radius 4 - radius is sqrt(2+3+5+7) = 4.12
@@ -2266,7 +2272,7 @@ value   = 7
 reqs    =
     { "type", "name", "range"
       "MinSize", "30", "City"
-      "Tech", "Railroad", "Player"
+      "Tech", "Machine Tools", "Player"
       "Building", "Mass Transit", "City"
       "Building", "Super Highways", "City"
     }
@@ -2278,7 +2284,7 @@ value   = 7
 reqs    =
     { "type", "name", "range"
       "MinSize", "30", "City"
-      "Tech", "Railroad", "Player"
+      "Tech", "Machine Tools", "Player"
       "Building", "Mass Transit", "City"
       "Building", "Super Highways", "City"
     }
@@ -2290,7 +2296,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "MinSize", "30", "City"
-      "Tech", "Railroad", "Player"
+      "Tech", "Machine Tools", "Player"
       "Building", "Mass Transit", "City"
       "Building", "Super Highways", "City"
     }
@@ -2348,21 +2354,21 @@ reqs	=
 name   = "Enable_Nuke"
 value   = 1
 
-[effect_migration_small_town_bonus]
-name	= "Migration_Pct"
-value	= 33
-reqs	=
-    { "type", "name", "range"
-      "MinSize", "1", "City"
-    }
+;[effect_migration_small_town_bonus]
+;name	= "Migration_Pct"
+;value	= 33
+;reqs	=
+;    { "type", "name", "range"
+;      "MinSize", "1", "City"
+;    }
 
-[effect_migration_small_town_bonus_0]
-name	= "Migration_Pct"
-value	= -33
-reqs	=
-    { "type", "name", "range"
-      "MinSize", "2", "City"
-    }
+;[effect_migration_small_town_bonus_0]
+;name	= "Migration_Pct"
+;value	= -33
+;reqs	=
+;    { "type", "name", "range"
+;      "MinSize", "2", "City"
+;    }
     
 [effect_upkeep_free_units_despotism_1]
 name	= "Unit_Upkeep_Free_Per_City"

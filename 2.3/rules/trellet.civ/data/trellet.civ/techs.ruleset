@@ -11,6 +11,8 @@
 description="Trellet.civ root_req'ed technology data for Freeciv 2.3"
 options="+Freeciv-2.3-ruleset"
 
+; /* <-- avoid gettext warnings
+;
 ; Below: The individual advances, one per section.
 ; The number can be variable, up to 196.
 ;
@@ -20,7 +22,11 @@ options="+Freeciv-2.3-ruleset"
 ;
 ; Notes:
 ;
-; name          = name as seen by user 
+; name          = translatable name as seen by user
+; rule_name     = (optional) name for savegames, rulesets etc; if not
+;                 present, 'name' is used. Since the name used in savegames
+;                 must not change, use this when renaming a tech after a
+;                 ruleset has been released.
 ; req1, req2	= advances required before researching this one
 ; root_req      = tech required before acquiring this tech, by any
 ;     means, inherited by all techs that require this tech in turn unless
@@ -32,8 +38,8 @@ options="+Freeciv-2.3-ruleset"
 ; helptext	= optional help text string (set units ruleset for examples)
 ; bonus_message = text seen when a player is the first to 
 ;                 discover an bonus tech.
-; cost		= if tech_cost_style is set to 3, this field is read for
-;		  information on how much a tech costs
+; cost          = if tech_cost_style is set to 2, this field is read for
+;                 information on how much a tech costs
 ;
 ; Special values for req1 and req2 are "None" (first section below) 
 ; and "Never" (never available).  If only one tech is required, 
@@ -48,6 +54,8 @@ options="+Freeciv-2.3-ruleset"
 ; "Population_Pollution_Inc" = Increase the pollution factor created by
 ;                              population by one
 ; "Build_Airborne" = from now on can build air units (for use by AI)
+;
+; */ <-- avoid gettext warnings
 
 [advance_advanced_flight]
 name     = _("Advanced Flight")

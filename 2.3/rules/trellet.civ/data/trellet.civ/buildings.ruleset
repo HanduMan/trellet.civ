@@ -87,9 +87,9 @@ sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to grow larger than size 8.  A Sewer System is also\
- required for a city to grow larger than size 12. \n
-Aqueduct reduces plague risk in a city by 20%.\
+Allows a city to grow larger than size 8 and reduces the chance of plague\
+ within the city. A Sewer System is required for a city to grow larger\
+ than size 12.\
 ")
 ; NB: plague (illness) has to be activated in the ruleset
 
@@ -625,7 +625,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Reduces the unhappiness caused by aggressively deployed military\
  units owned by the city by 2 under Democracy and 1 under Republic\
- -- in other words, it neutralises the unhappiness caused by a single\
+ -- in other words, it neutralizes the unhappiness caused by a single\
  military unit. This improvement has no effect under other governments.\
 ")
 ; NOTE:
@@ -795,9 +795,9 @@ sabotage	= 100
 sound		= "b_sewer_system"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to grow larger than size 12.  An Aqueduct is first\
- required for a city to grow larger than size 8. \n
-Sewer System reduces plague risk in a city by 30%. \
+Allows a city to grow larger than size 12. Pre-requirement is an Aqueduct\
+ for a city to grow larger than size 8. The Sewer System further reduces\
+ the chance of a plague.\
 ")
 ; NB: plague (illness) has to be activated in the ruleset
 
@@ -881,10 +881,10 @@ Space Modules are the most expensive parts of spaceships.  There\
 - Habitation Module: provides living space for 10,000 people.\
 "), _("\
 - Life Support Module: provides food and water for the population of\
-  one Habitation Module.\
+ one Habitation Module.\
 "), _("\
 - Solar Panels: provides the energy needed for any two of the other\
-  Modules.\
+ Modules.\
 "), _("\
 You can build up to 4 Space Modules of each kind.\
 "), _("\
@@ -1554,7 +1554,7 @@ sound		= "w_seti_program"
 sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Boosts science production in each city with a Research Lab by 100%. \
+Boosts science production in each city with a Research Lab by 100%.\
 ")
 
 [building_shakespeares_theatre]
@@ -1671,7 +1671,7 @@ helptext	= _("\
 Counts as a Police Station in every city. (That is, for each city, it\
  reduces the unhappiness caused by aggressively deployed military\
  units owned by that city by 2 under Democracy and 1 under Republic --\
- in other words, it neutralises the unhappiness caused by a single\
+ in other words, it neutralizes the unhappiness caused by a single\
  military unit per city. This wonder has no effect under other\
  governments.)\
 ")

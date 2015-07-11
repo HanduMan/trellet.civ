@@ -189,10 +189,11 @@ size_effect    = 3
 ; 0 - no upkeep
 ; 1 - upkeep is calculated as:
 ;     <Cost of technology> / tech_upkeep_divider + tech_upkeep_free
-tech_upkeep_style = 0
+tech_upkeep_style = 1
 
 ; upkeep cost is divided by this value
-tech_upkeep_divider = 2000
+;tech_upkeep_divider = 2000
+tech_upkeep_divider = 200
 
 [calendar]
 ; Year in the beginning of the game
@@ -224,7 +225,7 @@ negative_label = _("BC")
 ;       "int_set", 123, FALSE
 ;       "str_set", "test", FALSE
 		"saveturns", 1, FALSE
-		"savename", "trellet_2_3_test", FALSE
+		"savename", "megaciv_6", FALSE
 		"timeout", 43200, FALSE
 		"turnblock", TRUE, FALSE
 		"fixedlength", FALSE, FALSE
@@ -262,11 +263,11 @@ negative_label = _("BC")
 		"notradesize", 3, FALSE
 		"airliftingstyle", "TO_ALLIES|FROM_ALLIES", FALSE
 
-		"migration", FALSE, FALSE
-		"mgr_turninterval", 9, FALSE
+		"migration", TRUE, FALSE
+		"mgr_turninterval", 13, FALSE
 		"mgr_foodneeded", TRUE, FALSE
-		"mgr_distance", 0, FALSE
-		"mgr_worldchance", 10, FALSE
+		"mgr_distance", 3, FALSE
+		"mgr_worldchance", 5, FALSE
 		"mgr_nationchance", 20, FALSE
 
 		"borders", "ENABLED", FALSE
@@ -276,7 +277,7 @@ negative_label = _("BC")
 
 		"sciencebox", 120, FALSE
 		"techpenalty", 75, FALSE
-		"diplcost", 100, FALSE
+		"diplcost", 50, FALSE
 		"contactturns", 50, FALSE
 		"diplomacy", "HUMAN", FALSE
 		"diplchance", 50, FALSE
@@ -284,21 +285,24 @@ negative_label = _("BC")
 		"unreachableprotects", FALSE, FALSE
 		"homecaughtunits", FALSE, FALSE
 ;		"killunhomed", 10, FALSE
-
-		"spacerace", FALSE, FALSE
-		"demography", "Oqrb", FALSE
-		"scorelog", TRUE, FALSE
+		"timeaddenemymove", 30, FALSE
+		"unitwaittime", 60, FALSE
 
 		"endturn", 1000, FALSE
+		"spacerace", TRUE, FALSE
+		"endspaceship", TRUE, FALSE
+		"demography", "Oqrb", FALSE
+		"scorelog", TRUE, FALSE
+		"scorefile", "megaciv_score.log", FALSE
 
 		"allowtake", "b", FALSE
-		"cmdlevel", "none", FALSE
 
 		; uncomment for a test game:
+		"savename", "trellet_civ_test_6", FALSE
+		"scorefile", "trellet_civ_score.log", FALSE
 		"timeout", 28800, FALSE
 		"diplomacy", "ALL", FALSE
 		"demography", "NPALRSEMOqrb", FALSE
 		"allowtake", "oObdaAhH", FALSE
-		"cmdlevel", "admin", FALSE
 		"aifill", 15, FALSE
      }

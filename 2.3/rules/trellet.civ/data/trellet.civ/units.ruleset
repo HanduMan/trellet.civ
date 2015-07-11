@@ -28,7 +28,7 @@ names = "Airbase"
 veteran_names = _("green"), _("veteran"), _("hardened"), _("elite"), _("chucknorris")
 
 ; The percentage chance of increasing level through combat
-veteran_raise_chance = 50, 33, 20, 5, 0
+veteran_raise_chance = 50, 33, 20, 1, 0
 
 ; Power factors are as a percentage.
 ; +50% is represented by 150
@@ -94,7 +94,7 @@ veteran_move_bonus = 0, 0, 0, 0
 
 [unitclass_missile]
 ; /* TRANS: Unit class: used adjectivally */
-name          = _("Missile")
+name          = _("?unitclass:Missile")
 move_type     = "Both"
 min_speed     = 1
 hp_loss_pct   = 0
@@ -111,9 +111,19 @@ flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
                 "CollectRansom", "ZOC", "CanFortify", "CanPillage",
                 "TerrainDefense"
 
+[unitclass_land_nonmil]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Civilian")
+move_type     = "Land"
+min_speed     = 1
+hp_loss_pct   = 0
+flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere",
+                "CanFortify", "CanPillage", "ZOC",
+                "TerrainDefense", "DoesntOccupyTile"
+
 [unitclass_sea]
 ; /* TRANS: Unit class: used adjectivally */
-name          = _("Sea")
+name          = _("?unitclass:Sea")
 move_type     = "Sea"
 min_speed     = 2
 hp_loss_pct   = 0
@@ -121,11 +131,11 @@ flags         = "TerrainSpeed", "DamageSlows"
 
 [unitclass_trireme]
 ; /* TRANS: Unit class: used adjectivally */
-name          = _("Trireme")
-move_type     = "Sea"
+name          = _("?unitclass:Trireme")
+move_type     = "Both"
 min_speed     = 2
 hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows"
+flags         = "TerrainSpeed", "DamageSlows", "RiverNative"
 
 [unitclass_heli]
 ; /* TRANS: Unit class: used adjectivally */
@@ -201,7 +211,8 @@ flags         = "Unreachable", "DoesntOccupyTile"
 ; "HelpWonder"	= can help build wonders
 ; "TradeRoute"	= can establish trade routes
 ; "IgZOC"	= ignore Zones of Control (ZOC) even if unit class has "ZOC" flag
-; "NonMil"	= a non-military unit, does not cause unhappiness
+; "NonMil"	= a non-military unit: no attacks; no martial law; can enter
+;                 peaceful borders; DoesntOccupyTile
 ; "IgTer"	= ignore terrain/road/rail, treat every tile as 1/3 move cost
 ; "OneAttack"	= can only make a single attack, regardless of movement points
 ; "Pikemen"	= double defence power against "Horse" flag units
@@ -306,7 +317,7 @@ flags         = "Unreachable", "DoesntOccupyTile"
 
 [unit_settlers]
 name          = _("Settlers")
-class         = "Land"
+class         = "Civilian"
 tech_req      = "None"
 obsolete_by   = "None"
 graphic       = "u.settlers"
@@ -344,7 +355,7 @@ Upkeep for Settlers is in food as well as production, and a Settler\
 
 [unit_worker]
 name          = _("?unit:Workers")
-class         = "Land"
+class         = "Civilian"
 tech_req      = "Pottery"
 obsolete_by   = "Engineers"
 graphic       = "u.worker"
@@ -377,7 +388,7 @@ Workers are similar to Settlers in that they can improve terrain --\
 
 [unit_engineers]
 name          = _("Engineers")
-class         = "Land"
+class         = "Civilian"
 tech_req      = "Explosives"
 obsolete_by   = "None"
 graphic       = "u.engineers"
@@ -1145,6 +1156,7 @@ attack        = 6
 defense       = 1
 hitpoints     = 10
 firepower     = 1
+bombard_rate  = 1 
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1153,7 +1165,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "OneAttack"
+flags         = "OneAttack", "Bombarder", "NoVeteran"
 roles         = "AttackStrong"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -1178,6 +1190,7 @@ attack        = 8
 defense       = 1
 hitpoints     = 20
 firepower     = 1
+bombard_rate  =1 
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1186,7 +1199,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "OneAttack"
+flags         = "OneAttack","Bombarder", "NoVeteran"
 roles         = "AttackStrong", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy\
@@ -1212,6 +1225,7 @@ attack        = 10
 defense       = 1
 hitpoints     = 20
 firepower     = 2
+bombard_rate  =1 
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1220,7 +1234,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "OneAttack"
+flags         = "OneAttack", "Bombarder", "NoVeteran"
 roles         = "AttackStrong"
 helptext      = _("\
 The artillery is an upgraded cannon. It is a very\
@@ -1245,6 +1259,7 @@ attack        = 12
 defense       = 2
 hitpoints     = 30
 firepower     = 2
+bombard_rate  =1 
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 0
@@ -1253,7 +1268,7 @@ uk_happy      = 1
 uk_shield     = 4
 uk_food       = 0
 uk_gold       = 0
-flags         = "OneAttack"
+flags         = "OneAttack", "Bombarder", "NoVeteran"
 roles         = "AttackStrong"
 helptext      = _("\
 Howitzers are upgraded artillery with improved\
@@ -1388,7 +1403,7 @@ uk_happy      = 1
 uk_shield     = 4
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Land"
+cargo         = "Land", "Civilian"
 flags         = "FieldUnit", "OneAttack", "Helicopter", "AirUnit"
 roles         = ""
 helptext      = _("\
@@ -1490,7 +1505,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Land"
+cargo         = "Civilian"
 flags         = "BadCityDefender", "No_Land_Attack", "NonMil"
 roles         = "Ferryboat"
 helptext      = _("\
@@ -1525,7 +1540,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Land"
+cargo         = "Land", "Civilian"
 flags         = "BadCityDefender", "No_Land_Attack"
 roles         = "Ferryboat"
 helptext      = _("\
@@ -1559,7 +1574,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Land"
+cargo         = "Land", "Civilian"
 flags         = "BadCityDefender"
 roles         = "Ferryboat", "BarbarianBoat"
 helptext      = _("\
@@ -1592,7 +1607,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Land"
+cargo         = "Civilian"
 flags         = "BadCityDefender", "NonMil"
 roles         = "Ferryboat", "BarbarianBoat"
 helptext      = _("\
@@ -1626,7 +1641,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Land"
+cargo         = "Land", "Civilian"
 flags         = "BadCityDefender"
 roles         = "Hunter"
 helptext      = _("\
@@ -1896,11 +1911,44 @@ uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Land"
+cargo         = "Civilian"
 flags         = "BadCityDefender", "NonMil"
 roles         = "Ferryboat"
 helptext      = _("\
 The Transport cannot attack on its own but\
+ may defend itself when under attack.\
+")
+
+[unit_mil_transport]
+name          = _("Military Transport")
+class         = "Sea"
+tech_req      = "Industrialization"
+obsolete_by   = "None"
+graphic       = "u.mil_transport"
+graphic_alt   = "u.transport"
+sound_move    = "m_transport"
+sound_move_alt = "m_generic"
+sound_fight   = "f_transport"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 0
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 8
+transport_cap = 8
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 3
+uk_food       = 0
+uk_gold       = 0
+cargo         = "Land", "Civilian"
+flags         = "BadCityDefender"
+roles         = "Ferryboat"
+helptext      = _("\
+The Military Transport cannot attack on its own but\
  may defend itself when under attack.\
 ")
 
@@ -1957,6 +2005,7 @@ attack        = 20
 defense       = 0
 hitpoints     = 10
 firepower     = 10
+bombard_rate  = 1 
 move_rate     = 16
 vision_radius_sq = 0
 transport_cap = 0
@@ -1966,7 +2015,7 @@ uk_shield     = 5
 uk_food       = 0
 uk_gold       = 0
 targets       = "Air", "Missile" 
-flags         = "FieldUnit", "OneAttack", "AirUnit"
+flags         = "FieldUnit", "OneAttack", "AirUnit", "Bombarder"
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
@@ -2175,7 +2224,7 @@ A Spy that survives the more aggressive actions (sabotage, theft,\
 
 [unit_caravan]
 name          = _("Caravan")
-class         = "Land"
+class         = "Civilian"
 tech_req      = "Trade"
 obsolete_by   = "Freight"
 graphic       = "u.caravan"
@@ -2214,7 +2263,7 @@ TIP:  You can stockpile a stack of Caravans in advance and bring\
 
 [unit_freight]
 name          = _("Freight")
-class         = "Land"
+class         = "Civilian"
 tech_req      = "The Corporation"
 obsolete_by   = "None"
 graphic       = "u.freight"
@@ -2245,7 +2294,7 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 
 [unit_explorer]
 name          = _("Explorer")
-class         = "Land"
+class         = "Civilian"
 tech_req      = "Seafaring"
 obsolete_by   = "Partisan"
 graphic       = "u.explorer"
