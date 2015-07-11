@@ -2370,6 +2370,46 @@ value   = 1
 ;      "MinSize", "2", "City"
 ;    }
     
+[effect_upkeep_free_units_monarchy_1]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 3
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+      "Tech", "Gunpowder", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_monarchy_2]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 3
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+      "Tech", "Mobile Warfare", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_communism_1]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 3
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "Tech", "Gunpowder", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_communism_2]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 3
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
 [effect_upkeep_free_units_despotism_1]
 name	= "Unit_Upkeep_Free_Per_City"
 value	= 1
@@ -2736,6 +2776,840 @@ value	= 1
 reqs   =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"
+	   "MinSize", "38", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_0]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_1]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "2", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_2]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "3", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_3]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "4", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_4]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "5", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_5]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "6", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_6]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "7", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_7]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "8", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_8]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "9", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_9]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "10", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_10]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "11", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_11]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "12", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_12]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "13", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_13]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "14", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_14]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "15", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_15]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "16", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_16]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "17", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_17]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "18", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_18]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "19", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_19]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "20", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_20]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "21", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_21]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "22", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_22]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "23", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_23]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "24", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_24]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "25", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_25]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "26", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_26]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "27", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_27]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "28", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_28]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "29", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_29]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "30", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_30]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "31", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_31]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "32", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_32]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "33", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_33]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "34", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_34]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "35", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_35]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "36", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_36]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "37", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_1_37]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Gunpowder", "Player"
+	   "MinSize", "38", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_0]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_1]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "2", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_2]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "3", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_3]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "4", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_4]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "5", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_5]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "6", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_6]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "7", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_7]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "8", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_8]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "9", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_9]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "10", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_10]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "11", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_11]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "12", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_12]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "13", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_13]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "14", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_14]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "15", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_15]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "16", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_16]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "17", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_17]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "18", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_18]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "19", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_19]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "20", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_20]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "21", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_21]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "22", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_22]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "23", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_23]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "24", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_24]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "25", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_25]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "26", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_26]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "27", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_27]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "28", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_28]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "29", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_29]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "30", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_30]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "31", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_31]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "32", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_32]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "33", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_33]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "34", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_34]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "35", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_35]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "36", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_36]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+	   "MinSize", "37", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_despotism_2_37]
+name	= "Unit_Upkeep_Free_Per_City"
+value	= 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Tech", "Mobile Warfare", "Player"
 	   "MinSize", "38", "City"
       "OutputType", "Shield", "Local"
     }
