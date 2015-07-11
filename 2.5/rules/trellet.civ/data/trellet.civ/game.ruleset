@@ -421,7 +421,7 @@ colorlist =
 ;		"killunhomed", 10, FALSE
 		"killstack", FALSE, FALSE
 		"timeaddenemymove", 30, FALSE
-		"unitwaittime", 6420, FALSE ; 107 minutes
+		"unitwaittime", 0, FALSE ; (6420 would give 107 minutes.)
 
 		"endturn", 1000, FALSE
 		"spacerace", TRUE, FALSE
