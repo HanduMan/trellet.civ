@@ -1,0 +1,43 @@
+[nation_mordor]
+
+name=_("Mordor")
+plural=_("?plural:Mordorians")
+groups="Imaginary"
+legend=_("In J. R. R. Tolkien's fictional universe of Middle-earth, Mordor was the region occupied and controlled by Sauron, \
+in the southeast of northwestern Middle-earth to the East of Anduin, the great river. \
+Orodruin, a volcano in Mordor, was the destination of the Fellowship of the Ring \
+(and later Frodo Baggins and Sam Gamgee) in the quest to destroy the One Ring.")
+
+leaders = {
+ "name",            "sex"
+ "Sauron",          "Male"
+ "Gorthaur",        "Male"
+ "Morgoth Baulir",  "Male"
+ "Melkor",          "Male"
+ "Shelob",          "Female"
+}
+ruler_titles = {
+ "government",     "male_title",       "female_title"
+ "Despotism",      _("Overlord %s"),   _("Overlady %s")
+ "Monarchy",       _("Dark Lord %s"), _("Dark Lady %s")
+}
+flag="mordor"
+flag_alt = "vampire"
+city_style = "European"
+
+init_techs=""
+init_buildings=""
+init_units=""
+
+civilwar_nations = "Vampire", "Werewolf"
+
+; Cities associated with vampires in fiction or legend
+cities =
+  "Barad-Dûr", "Durthang", "Orodruin", "Morannon", "Dol Guldur",
+  "Minas Morgul", "Cirith Ungol", "Moria", "Angmar", "Gorgoroth",
+  "Morgai", "Nurn", "Khand", "Rhûn", "Harad", "Dagorlad", "Ephel Dúath",
+  "Ered Lithui", "Emyn Muil", "Núrnen", "Poros", "Harnen", "Lugbúrz",
+  "Angband", "Carn Dûm", "Utumno", "Amon Amarth",  "Thangorodrim", 
+  "Orthanc", "Angrenost", "Mount Fang", "Cirith Gorgor", "Moontower", 
+  "Hells of Iron", "Udûn", "Havens of Umbar", "Phurunargian", "Khand", 
+  "Rhûn", "Sammath Naur"
