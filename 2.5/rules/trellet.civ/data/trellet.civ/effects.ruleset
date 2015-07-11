@@ -107,7 +107,7 @@ reqs    =
 ; basic free tech upkeep
 [effect_upkeep_tech_free]
 type    = "Tech_Upkeep_Free"
-value   = 3
+value   = 30
 
 ; Fortress HP regen
 [effect_fortress_hp_regen]
@@ -2693,9 +2693,10 @@ reqs	=
 type   = "Enable_Nuke"
 value   = 1
 
-[effect_space_race]
-type	= "Enable_Space"
-value	= 1
+; Requires Apollo program
+;[effect_space_race]
+;type	= "Enable_Space"
+;value	= 1
 
 ;[effect_migration_small_town_bonus]
 ;type	= "Migration_Pct"
@@ -3976,4 +3977,5 @@ value   = 40
 nreqs   =
     { "type", "name", "range"
       "MinSize", "3", "City"
+      "Building", "Granary", "City"
     }

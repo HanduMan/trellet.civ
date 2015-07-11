@@ -198,7 +198,7 @@ size_effect    = 3
 tech_upkeep_style = "Basic"
 
 ; upkeep cost is divided by this value
-tech_upkeep_divider = 1070
+tech_upkeep_divider = 400
 
 ; Method of selecting techs given for free
 ; "Goal"     - Towards player`s goal, random if no goal
