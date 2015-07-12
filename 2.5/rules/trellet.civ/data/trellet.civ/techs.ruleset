@@ -658,7 +658,9 @@ root_req = "Steam Engine"
 flags    = ""
 graphic     = "a.railroad"
 graphic_alt = "-"
-helptext = _("Decreases one-time revenue from new trade routes.")
+helptext = _("Decreases one-time revenue from new trade routes. \
+Allows settler units to build rail roads. \
+Increases city radius for cities of size 10 and larger.")
 
 [advance_recycling]
 name     = _("Recycling")
