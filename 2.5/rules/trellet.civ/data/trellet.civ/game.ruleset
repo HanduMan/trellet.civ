@@ -7,7 +7,7 @@ options="+Freeciv-2.5-ruleset"
 
 [about]
 ; Ruleset name
-name = _("MegaCiv ruleset")
+name = _("MegaCiv ruleset v.2.5.3")
 
 ; Description of the ruleset
 description = _("You are playing Freeciv with MegaCiv rules by trellet.civ.")
