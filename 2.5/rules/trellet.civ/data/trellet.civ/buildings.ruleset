@@ -958,6 +958,32 @@ The cost to enemy Diplomats and Spies of inciting a revolt in a\
  government center (under all forms of government).\
 ")
 
+[building_winter_palace]
+name		= _("Winter Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Code of Laws", "Player"
+    }
+graphic	= "b.winterpalace"
+graphic_alt	= "b.palace"
+obsolete_by	= "None"
+build_cost	= 70
+upkeep		= 2
+sabotage	= 50
+sound		= "b_winterpalace"
+sound_alt	= "b_palace"
+helptext	= _("\
+Makes a city a regional center of your government.\
+ Corruption in other cities is related to how far away from the nearest\
+ government center they are, except when the government is Democracy or\
+ Communism.\
+"), _("\
+The cost to enemy Diplomats and Spies of inciting a revolt in a\
+ city also depends upon the city's distance from the  nearest\
+ government center (under all forms of government).\
+")
+
 [building_police_station]
 name		= _("Police Station")
 genus		= "Improvement"

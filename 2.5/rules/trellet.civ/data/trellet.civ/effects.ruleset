@@ -1502,6 +1502,7 @@ reqs	=
 nreqs	=
     { "type", "name", "range"
       "Building", "Summer Palace", "City"
+      "Building", "Winter Palace", "City"
     }
 
 [effect_another_gov_center]
@@ -1513,6 +1514,20 @@ reqs	=
     }
 nreqs	=
     { "type", "name", "range"
+      "Building", "Winter Palace", "City"
+      "Building", "Palace", "City"
+    }
+
+[effect_yet_another_gov_center]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Winter Palace", "City"
+    }
+nreqs	=
+    { "type", "name", "range"
+      "Building", "Summer Palace", "City"
       "Building", "Palace", "City"
     }
 
