@@ -1499,6 +1499,22 @@ reqs	=
     { "type", "name", "range"
       "Building", "Palace", "City"
     }
+nreqs	=
+    { "type", "name", "range"
+      "Building", "Summer Palace", "City"
+    }
+
+[effect_another_gov_center]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Summer Palace", "City"
+    }
+nreqs	=
+    { "type", "name", "range"
+      "Building", "Palace", "City"
+    }
 
 [effect_palace_5]
 type = "Output_Bonus"
