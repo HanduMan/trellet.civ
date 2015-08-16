@@ -466,6 +466,10 @@ root_req = "Physics"
 flags    = ""
 graphic     = "a.magnetism"
 graphic_alt = "-"
+helptext = _("Allows an additional trade route to be created to each of your cities. \
+Initially cities can support a maximum of two trade routes. \
+Knowledge of the technologies Magnetism and The Corporation each increase this limit by one; \
+knowing both allows cities to support four trade routes each.")
 
 [advance_map_making]
 name     = _("Map Making")
@@ -787,6 +791,10 @@ root_req = "Industrialization"
 flags    = ""
 graphic     = "a.the_corporation"
 graphic_alt = "-"
+helptext = _("Allows an additional trade route to be created to each of your cities. \
+Initially cities can support a maximum of two trade routes. \
+Knowledge of the technologies Magnetism and The Corporation each increase this limit by one; \
+knowing both allows cities to support four trade routes each.")
 
 [advance_the_republic]
 name     = _("The Republic")
