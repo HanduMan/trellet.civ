@@ -3983,4 +3983,4 @@ nreqs   =
 
 [effect_trade_revenue_reduce]
 type    = "Trade_Revenue_Bonus"
-value   = -1007
+value   = -1888
