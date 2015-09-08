@@ -3980,3 +3980,7 @@ nreqs   =
       "MinSize", "3", "City"
       "Building", "Granary", "City"
     }
+
+[effect_trade_revenue_reduce]
+type    = "Trade_Revenue_Bonus"
+value   = -1007
