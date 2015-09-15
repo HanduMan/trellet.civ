@@ -1669,9 +1669,10 @@ cargo         = "Civilian"
 flags         = "BadCityDefender", "NonMil"
 roles         = "Ferryboat"
 helptext      = _("\
-The Flotilla is your first boat unit. It can act\
+The Flotilla is your first non-military boat unit. It can act\
  as a transport ship and has no offensive\
  capabilities, but may not enter deep ocean tiles.\
+ The Flotilla can also travel on rivers.\
 ")
 
 [unit_trireme]
@@ -1716,7 +1717,7 @@ name          = _("Caravel (non-mil)")
 rule_name          = _("Caravel")
 class         = "Sea"
 tech_req      = "Navigation"
-obsolete_by   = "Transport"
+obsolete_by   = "Galleon"
 graphic       = "u.caravel"
 graphic_alt   = "-"
 sound_move    = "m_caravel"
@@ -1741,16 +1742,51 @@ cargo         = "Civilian"
 flags         = "BadCityDefender", "NonMil"
 roles         = "Ferryboat"
 helptext      = _("\
-The Caravel replaces the Flotilla and can enter\
+The Caravel replaces the Flotilla as non-military\
+ transport vessel and can enter\
+ any ocean tile.\
+")
+
+[unit_galley]
+name          = _("Galley (mil)")
+rule_name          = _("Galley")
+class         = "Sea"
+tech_req      = "Navigation"
+obsolete_by   = "Frigate"
+graphic       = "u.galley"
+graphic_alt   = "u.caravel"
+sound_move    = "m_galley"
+sound_move_alt = "m_generic"
+sound_fight   = "f_galley"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 8
+transport_cap = 3
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 0
+cargo         = "Land", "Civilian"
+flags         = "BadCityDefender"
+roles         = "Ferryboat"
+helptext      = _("\
+The Galley replaces the Trireme and can enter\
  any ocean tile.\
 ")
 
 [unit_galleon]
-name          = _("Galleon (mil)")
+name          = _("Galleon (non-mil)")
 rule_name          = _("Galleon")
 class         = "Sea"
 tech_req      = "Magnetism"
-obsolete_by   = "Military Transport"
+obsolete_by   = "Transport"
 graphic       = "u.galleon"
 graphic_alt   = "-"
 sound_move    = "m_galleon"
@@ -1759,7 +1795,7 @@ sound_fight   = "f_galleon"
 sound_fight_alt = "f_generic"
 build_cost    = 40
 pop_cost      = 0
-attack        = 1
+attack        = 0
 defense       = 2
 hitpoints     = 20
 firepower     = 1
@@ -1767,17 +1803,18 @@ move_rate     = 6
 vision_radius_sq = 8
 transport_cap = 4
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Civilian", "Land", "Big Land"
+cargo         = "Civilian"
 flags         = "BadCityDefender"
-roles         = "Ferryboat", "BarbarianBoat"
+roles         = "Ferryboat", "BarbarianBoat", "NonMil"
 helptext      = _("\
 The Galleon is a pure transport ship and cannot\
  attack other ships, though it may still defend\
  itself when attacked.\
+ The Galleon can only transport civilian units.\
 ")
 
 [unit_frigate]
@@ -1785,7 +1822,7 @@ name          = _("Frigate")
 rule_name          = _("Frigate (mil)")
 class         = "Sea"
 tech_req      = "Magnetism"
-obsolete_by   = "Ironclad"
+obsolete_by   = "Destroyer"
 graphic       = "u.frigate"
 graphic_alt   = "-"
 sound_move    = "m_frigate"

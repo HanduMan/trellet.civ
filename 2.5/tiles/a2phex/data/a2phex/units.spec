@@ -108,8 +108,10 @@ tiles = { "row", "column", "tag"
 ; More units for MegaCiv-ruleset (images copied from realismmod by Le Bashar)
   8, 15, "u.cargocopter"
   4,  0, "u.flotilla"
-  5, 19, "u.rocket"
+  4,  2, "u.galley"
   4, 18, "u.naval_engineers"
+  4, 19, "u.mil_transport"
+  5, 19, "u.rocket"
 ; Yet another unit for MegaCiv ruleset (The Incredible Hulk 2 icon by Exhumed) 
 ; http://www.veryicon.com/icons/game/mega-games-pack-22/the-incredible-hulk-2.html 
   8, 19, "u.super_soldier"
