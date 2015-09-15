@@ -1,0 +1,268 @@
+
+[tilespec]
+
+; Format and options of this tilespec file:
+options = "+Freeciv-2.5-tilespec"
+
+; A simple name for the tileset specified by this file:
+name = "a2phex"
+
+priority = 30
+
+; TODO: add more overall information fields on tiles, 
+; eg, description, authors, colors, etc.
+
+; Basic tile sizes:
+normal_tile_width  = 128
+normal_tile_height = 34
+small_tile_width   = 15
+small_tile_height  = 20
+
+; Basic tile style.
+type = "isometric"
+is_hex = TRUE
+hex_side = 30
+
+; Do not blend hills and mountains together.
+;is_mountainous = 0
+
+; Use roadstyle 0 (old iso style)
+;roadstyle = 0
+;roadstyle = 2
+
+; Fogstyle 2, darkness_style 4 : blended fog
+fogstyle = 0
+darkness_style = 3
+;JHA:
+;fogstyle = 0
+;darkness_style = 3
+; Which terrain layer darkness is drawn top of (0-2)
+darkness_layer = 0
+
+; offset the flags by this amount when drawing units
+unit_flag_offset_x = 36
+unit_flag_offset_y = 8	
+city_flag_offset_x = 2
+city_flag_offset_y = 9
+
+; offset the units by this amount when drawing units
+unit_offset_x = 32
+unit_offset_y = 0
+
+; offset the tile label text by this amount
+tilelabel_offset_y = 15;
+
+;Enable citybar
+;is_full_citybar = 1
+; offset the citybar text by this amount (from the city tile origin)
+citybar_offset_y = 42
+
+; Font size (points) to use to draw city names and productions:
+city_names_font_size = 9
+city_productions_font_size = 8
+
+; These are special because they get freed and reloaded
+; as required:
+main_intro_file    = "misc/intro"
+minimap_intro_file = "misc/radar"
+
+; Below, the graphics spec files; must be somewhere (anywhere) in 
+; the data path. Order may be important for color allocation on 
+; low-color systems, and if there are any duplicate tags (lattermost
+; tag is used).
+files = 
+  "a2phex/terrain1.spec",
+  "a2phex/terrain2.spec",
+  "a2phex/water.spec",
+  "a2phex/mountains.spec",
+  "a2phex/hills.spec",
+  "a2phex/rivers.spec",
+  "a2phex/units.spec",
+  "a2phex/westerncities.spec",
+  "a2phex/easterncities.spec",
+  "a2phex/moderncities.spec",
+;  "a2phex/buildings.spec",
+  "a2phex/tiles.spec",
+  "a2phex/grid.spec",
+  "a2phex/darkness.spec",
+  "a2phex/explosions.spec",
+  "a2phex/nuke.spec",
+;  "a2phex/colors.spec",
+  "misc/icons.spec",
+  "misc/buildings-large.spec",
+  "misc/wonders-large.spec",
+  "misc/small.spec",
+  "misc/governments.spec",
+  "misc/specialists.spec",
+  "misc/flags.spec",
+  "misc/space.spec",
+  "misc/techs.spec",
+  "misc/treaty.spec",
+  "misc/cursors.spec",
+  "misc/overlays.spec",
+  "misc/citybar.spec",
+  "misc/shields.spec",
+  "misc/editor.spec"
+
+; Include color definitions
+;*include "a2phex/colors.tilespec"
+*include "misc/colors.tilespec"
+
+; Terrain info - see README.graphics
+
+[roads]
+styles =
+    { "name",  "style"
+      "road.road",   "AllSeparate"
+      "road.rail",   "AllSeparate"
+      "road.maglev", "AllSeparate"
+      "road.river",  "River"
+    }
+
+[layer0]
+match_types = "shallow", "deep", "land"
+
+[layer1]
+match_types = "jungle", "forest", "hills", "mountains", "shallow", "deep", "ice" ; "water"
+
+[layer2]
+match_types = "water", "ice"
+
+; Water graphics referenced by terrain.ruleset
+;
+[tile_lake]
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "shallow"
+layer0_match_with = "land"
+layer0_sprite_type = "corner"
+
+[tile_coast]
+blend_layer = 1
+num_layers = 3
+layer0_match_type = "shallow"
+layer0_match_with = "land"
+layer0_sprite_type = "corner"
+layer1_match_type = "shallow"
+;layer1_match_with = "deep"
+layer1_sprite_type = "corner"
+layer2_match_type = "water"
+layer2_match_with = "ice"
+layer2_sprite_type = "corner"
+
+[tile_floor]
+blend_layer = 0
+num_layers = 3
+layer0_match_type = "deep"
+layer0_match_with = "land"
+layer0_sprite_type = "corner"
+layer1_match_type = "deep"
+layer1_match_with = "shallow"
+layer1_sprite_type = "corner"
+layer2_match_type = "water"
+layer2_match_with = "ice"
+layer2_sprite_type = "corner"
+
+; Land graphics referenced by terrain.ruleset
+;
+[tile_arctic]
+blend_layer = 0
+num_layers = 3
+layer0_match_type = "shallow"
+;layer0_match_with = "land"
+layer1_match_type = "ice"
+layer2_match_type = "ice"
+mine_sprite = "tx.oil_mine"
+
+[tile_ice]
+blend_layer = 0
+num_layers = 3
+layer0_match_type = "shallow"
+;layer0_match_with = "land"
+layer1_match_type = "ice"
+layer2_match_type = "ice"
+
+[tile_desert]
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+mine_sprite = "tx.oil_mine"
+
+[tile_forest]
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "forest"
+layer1_match_with = "forest"
+layer1_is_tall = TRUE
+layer1_offset_x = 15
+layer1_offset_y = 3
+mine_sprite = "tx.mine"
+
+[tile_arctic_forest]
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "forest"
+layer1_match_with = "forest"
+layer1_is_tall = TRUE
+layer1_offset_x = 15
+layer1_offset_y = 3
+mine_sprite = "tx.mine"
+
+[tile_grassland]
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+mine_sprite = "tx.mine"
+
+[tile_hills]
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "hills"
+layer1_match_with = "hills"
+layer1_is_tall = TRUE
+layer1_offset_x = 15
+layer1_offset_y = 5
+mine_sprite = "tx.mine"
+
+[tile_jungle]
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "jungle"
+layer1_match_with = "jungle"
+layer1_is_tall = TRUE
+layer1_offset_x = 15
+layer1_offset_y = 2
+mine_sprite = "tx.mine"
+
+[tile_mountains]
+blend_layer = 1
+num_layers = 2
+layer1_is_tall = TRUE
+layer1_offset_x = 15
+layer1_offset_y = 0 
+layer0_match_type = "land"
+layer1_match_type = "mountains"
+layer1_match_with = "mountains"
+mine_sprite = "tx.mine"
+
+[tile_plains]
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+mine_sprite = "tx.mine"
+
+[tile_swamp]
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+mine_sprite = "tx.oil_mine"
+
+[tile_tundra]
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+mine_sprite = "tx.oil_mine"
