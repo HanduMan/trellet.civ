@@ -1681,7 +1681,7 @@ name          = _("Trireme (mil)")
 rule_name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
-obsolete_by   = "Galleon"
+obsolete_by   = "Galley"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -1775,7 +1775,7 @@ uk_food       = 0
 uk_gold       = 0
 cargo         = "Land", "Civilian"
 flags         = "BadCityDefender"
-roles         = "Ferryboat"
+roles         = "Ferryboat", "BarbarianBoat"
 helptext      = _("\
 The Galley replaces the Trireme and can enter\
  any ocean tile.\
@@ -1808,8 +1808,8 @@ uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
 cargo         = "Civilian"
-flags         = "BadCityDefender"
-roles         = "Ferryboat", "BarbarianBoat", "NonMil"
+flags         = "BadCityDefender", "NonMil"
+roles         = "Ferryboat"
 helptext      = _("\
 The Galleon is a pure transport ship and cannot\
  attack other ships, though it may still defend\
@@ -1818,8 +1818,8 @@ The Galleon is a pure transport ship and cannot\
 ")
 
 [unit_frigate]
-name          = _("Frigate")
-rule_name          = _("Frigate (mil)")
+name          = _("Frigate (mil)")
+rule_name          = _("Frigate")
 class         = "Sea"
 tech_req      = "Magnetism"
 obsolete_by   = "Destroyer"
