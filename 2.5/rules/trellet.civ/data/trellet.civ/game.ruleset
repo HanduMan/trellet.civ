@@ -280,8 +280,8 @@ effects        = "ReducePopulation", "Fallout"
 settings =
   { "type",       "pct", "cancelling"
     "National",   100,   "Cancel"
-    "NationalIC", 100,   "Cancel"
-    "IN",         150,   "Cancel"
+    "NationalIC", 125,   "Cancel"
+    "IN",         175,   "Cancel"
     "INIC",       200,   "Cancel"
   }
 
