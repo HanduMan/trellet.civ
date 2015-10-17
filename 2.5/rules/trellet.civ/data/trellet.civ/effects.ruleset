@@ -2458,10 +2458,14 @@ nreqs    =
 type    = "City_Build_Slots"
 value   = 1
 
-; Trellet.civ: Only one route per city.
+; Trellet.civ: Only one route per city. Needs Trade tech.
 [effect_trade_routes]
 type    = "Max_Trade_Routes"
 value   = 1
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Trade", "Player"
+    }
 
 [effect_trade_routes_magnetism]
 type    = "Max_Trade_Routes"
