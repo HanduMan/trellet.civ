@@ -353,7 +353,7 @@ colorlist =
  set =
      { "name", "value", "lock"
 		"saveturns", 1, FALSE
-		"savename", "megaciv_6", FALSE
+		"savename", "megaciv_7", FALSE
 		"timeout", 43200, FALSE
 		"turnblock", TRUE, FALSE
 		"fixedlength", FALSE, FALSE
@@ -366,13 +366,13 @@ colorlist =
 
 		"mapsize", "PLAYER", FALSE
 ;		"size", 8, FALSE
-		"tilesperplayer", 264, FALSE
+		"tilesperplayer", 266, FALSE
 		"topology", "WRAPX|WRAPY|ISO|HEX", FALSE
 		"alltemperate", TRUE, FALSE
-		"temperature", 50, FALSE
-		"landmass", 40, FALSE
-		"steepness", 30, FALSE
-		"wetness", 60, FALSE
+		"temperature", 30, FALSE
+		"landmass", 37, FALSE
+		"steepness", 20, FALSE
+		"wetness", 30, FALSE
 		"specials", 25, FALSE
 		"huts", 0, FALSE
 		"globalwarming", TRUE, FALSE
@@ -380,9 +380,10 @@ colorlist =
 
 		"barbarians", "DISABLED", TRUE
 
-		"generator", "ISLAND", FALSE
-;		"startpos", "VARIABLE", FALSE
-		"startpos", "SINGLE", FALSE
+		"generator", "FRACTAL", FALSE
+		"startpos", "ALL", FALSE
+;		"generator", "ISLAND", FALSE
+;		"startpos", "SINGLE", FALSE
 		"startunits", "ccccxwww", FALSE
 		"dispersion", 3, FALSE
 
@@ -433,13 +434,13 @@ colorlist =
 		"allowtake", "b", FALSE
 
 		; uncomment for a test game:
-		"savename", "trellet_civ_test_6", FALSE
+		"savename", "trellet_civ_test_7", FALSE
 		"scorefile", "trellet_civ_score.log", FALSE
 		"unitwaittime", 0, FALSE 
-		"timeout", 420, FALSE
+		"timeout", 3420, FALSE
 		"diplomacy", "ALL", FALSE
 		"demography", "NPALRSEMOqrb", FALSE
 		"allowtake", "oObdaAhH", FALSE
-		"aifill", 12, FALSE
+		"aifill", 14, FALSE
      }
 	 
