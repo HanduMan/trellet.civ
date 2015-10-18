@@ -2661,6 +2661,17 @@ reqs    =
 ;      "OutputType", "shield", "Local"
 ;    }
 
+; Vision benefit from fortress watchtowers to Civilian units
+[effect_fortress_vision_civ]
+type    = "Unit_Vision_Radius_Sq"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Base", "Fortress", "tile"
+      "Tech", "Invention", "player"
+      "UnitClass", "Civilian", "Local"
+    }
+
 ; Airbase HP regen for air units
 [effect_airbase_hp_regen_a]
 type    = "HP_Regen"
