@@ -280,9 +280,9 @@ effects        = "ReducePopulation", "Fallout"
 settings =
   { "type",       "pct", "cancelling"
     "National",   100,   "Cancel"
-    "NationalIC", 200,   "Cancel"
-    "IN",         200,   "Cancel"
-    "INIC",       400,   "Cancel"
+    "NationalIC", 125,   "Cancel"
+    "IN",         175,   "Cancel"
+    "INIC",       200,   "Cancel"
   }
 
 [playercolors]
