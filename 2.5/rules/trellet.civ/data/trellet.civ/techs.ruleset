@@ -341,6 +341,15 @@ graphic     = "a.flight"
 graphic_alt = "-"
 helptext = _("Decreases one-time revenue from new trade routes.")
 
+[advance_fundamentalism]
+name     = _("Fundamentalism")
+req1     = "Theology"
+req2     = "Conscription"
+root_req = "Conscription"
+flags    = ""
+graphic     = "a.fundamentalism"
+graphic_alt = "-"
+
 [advance_fusion_power]
 name     = _("Fusion Power")
 req1     = "Nuclear Power"
