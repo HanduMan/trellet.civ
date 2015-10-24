@@ -223,7 +223,7 @@ graphic_alt = "-"
 
 [advance_conscription]
 name     = _("Conscription")
-req1     = "Democracy"
+req1     = "Economics"
 req2     = "Metallurgy"
 root_req     = "Metallurgy"
 flags    = ""
@@ -251,9 +251,9 @@ graphic_alt = "-"
 
 [advance_democracy]
 name     = _("Democracy")
-req1     = "Banking"
-req2     = "Invention"
-root_req     = "Invention"
+req1     = "Economics"
+req2     = "Railroad"
+root_req     = "Railroad"
 flags    = ""
 graphic     = "a.democracy"
 graphic_alt = "-"
@@ -340,6 +340,15 @@ flags    = "Build_Airborne"
 graphic     = "a.flight"
 graphic_alt = "-"
 helptext = _("Decreases one-time revenue from new trade routes.")
+
+[advance_fundamentalism]
+name     = _("Fundamentalism")
+req1     = "Theology"
+req2     = "Conscription"
+root_req = "Conscription"
+flags    = ""
+graphic     = "a.fundamentalism"
+graphic_alt = "-"
 
 [advance_fusion_power]
 name     = _("Fusion Power")

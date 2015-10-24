@@ -185,6 +185,14 @@ reqs	=
       "Gov", "Communism", "Player"
     }
 
+[effect_migration_fundamentalism]
+type    = "Migration_Pct"
+value	= -10
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+    }
+
 [effect_migration_republic]
 type    = "Migration_Pct"
 value	= 10
@@ -204,6 +212,14 @@ reqs	=
 [effect_base_enemy_unhappiness]
 type    = "Enemy_Citizen_Unhappy_Pct"
 value   = 100
+
+[effect_enemy_unhappiness_fundamentalism]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -50
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+    }
 
 [effect_enemy_unhappiness_communism]
 type    = "Enemy_Citizen_Unhappy_Pct"
@@ -310,9 +326,143 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
+[effect_corruption_fundamentalism0]
+type    = "Output_Waste"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Trade", "Local"
+    }
+
+[effect_corruption_fundamentalism1]
+type    = "Output_Waste_By_Distance"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Trade", "Local"
+    }
+
+[effect_waste_anarchy0]
+type    = "Output_Waste"
+value   = 37
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_anarchy1]
+type    = "Output_Waste_By_Distance"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_despotism0]
+type    = "Output_Waste"
+value   = 30
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_despotism1]
+type    = "Output_Waste_By_Distance"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_monarchy0]
+type    = "Output_Waste"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_monarchy1]
+type    = "Output_Waste_By_Distance"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_communism0]
+type    = "Output_Waste"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_republic0]
+type    = "Output_Waste"
+value   = 6
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_republic1]
+type    = "Output_Waste_By_Distance"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_fundamentalism0]
+type    = "Output_Waste"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_waste_fundamentalism1]
+type    = "Output_Waste_By_Distance"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
 [effect_base_unit_upkeep]
 type    = "Upkeep_Factor"
 value	= 1
+
+[effect_fundamentalism_unit_upkeep]
+type  = "Upkeep_Factor"
+value = 1
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Food", "Local"
+    }
+
+[effect_fundamentalism_free_fanatics]
+type  = "Fanatics"
+value = 1
+reqs  =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+    }
 
 [effect_republic_unit_upkeep]
 type    = "Upkeep_Factor"
@@ -385,6 +535,15 @@ reqs   =
       "OutputType", "Shield", "Local"
     }
 
+[effect_upkeep_free_units_fundamentalism]
+type   = "Unit_Upkeep_Free_Per_City"
+value  = 8
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
 [effect_civil_war_0]
 type    = "Civil_War_Chance"
 value   = 90
@@ -431,6 +590,14 @@ value   = 30
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Democracy", "Player"
+    }
+
+[effect_civil_war_6]
+type    = "Civil_War_Chance"
+value   = 66;6
+reqs	=
+    { "type",       "name",      "range"
+      "Gov", "Fundamentalism", "Player"
     }
 
 [effect_empire_size_base_0]
@@ -481,6 +648,14 @@ reqs	=
       "Gov", "Democracy",  "Player"
     }
 
+[effect_empire_size_base_6]
+type    = "Empire_Size_Base"
+value   = 14
+reqs    =
+    { "type",       "name",      "range"
+      "Gov", "Fundamentalism",  "Player"
+    }
+
 [effect_empire_size_step_0]
 type    = "Empire_Size_Step"
 value   = 6
@@ -507,7 +682,7 @@ reqs	=
 
 ; Empire_Size_Step disabled for Communism
 
-[effect_empire_size_step_3]
+[effect_empire_size_step_4]
 type    = "Empire_Size_Step"
 value   = 14
 reqs	=
@@ -515,12 +690,20 @@ reqs	=
       "Gov", "Republic",  "Player"
     }
 
-[effect_empire_size_step_4]
+[effect_empire_size_step_5]
 type    = "Empire_Size_Step"
 value   = 16
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Democracy", "Player"
+    }
+
+[effect_empire_size_step_6]
+type    = "Empire_Size_Step"
+value   = 12
+reqs    =
+    { "type",       "name",      "range"
+      "Gov", "Fundamentalism", "Player"
     }
 
 [effect_max_rates_0]
@@ -569,6 +752,14 @@ value   = 100
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Democracy", "Player"
+    }
+
+[effect_max_rates_6]
+type    = "Max_Rates"
+value   = 80
+reqs    =
+    { "type",       "name",      "range"
+      "Gov", "Fundamentalism", "Player"
     }
 
 [effect_martial_law_each_0]
@@ -736,6 +927,15 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
+[effect_gov_tile_bonus_6]
+type    = "Output_Inc_Tile_Celebrate"
+value   = 1
+reqs  =
+    { "type",       "name",      "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Trade", "Local"
+    }
+
 [effect_revolution_0]
 type    = "Revolution_When_Unhappy"
 value   = 1
@@ -790,6 +990,15 @@ nreqs  =
     { "type", "name", "range"
       "Nation", "Barbarian", "Player"
       "Nation", "Pirate", "Player"
+    }
+
+[effect_fundamentalism]
+type    = "Output_Bonus_2"
+value   = -50
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "science", "local"
     }
 
 [effect_airport]
@@ -1191,17 +1400,18 @@ nreqs	=
       "Building", "Palace", "City"
     }
 
-;[effect_courthouse_1]
-;type    = "Waste_Pct"
-;value	= 50
-;reqs	=
-;    { "type", "name", "range"
-;      "Building", "Courthouse", "City"
-;    }
-;nreqs	=
-;    { "type", "name", "range"
-;      "Building", "Palace", "City"
-;    }
+[effect_courthouse_1]
+type    = "Output_Waste_Pct"
+value	= 50
+reqs	=
+    { "type", "name", "range"
+      "Building", "Courthouse", "City"
+      "OutputType", "shield", "local"
+    }
+nreqs	=
+    { "type", "name", "range"
+      "Building", "Palace", "City"
+    }
 
 [effect_courthouse_2]
 type    = "Make_Content"
@@ -1460,13 +1670,14 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-;[effect_palace_1]
-;type    = "Waste_Pct"
-;value	= 50
-;reqs	=
-;    { "type", "name", "range"
-;      "Building", "Palace", "City"
-;    }
+[effect_palace_1]
+type    = "Output_Waste_Pct"
+value	= 50
+reqs	=
+    { "type", "name", "range"
+      "Building", "Palace", "City"
+      "OutputType", "Shield", "Local"
+    }
 
 [effect_palace_2]
 type    = "Spy_Resistant"
@@ -2373,6 +2584,14 @@ reqs    =
       "Tech", "Railroad", "Player"
     }
 
+[effect_tithes_fundamentalism]
+type    = "Happiness_To_Gold" 
+value   = 1 
+reqs    = 
+    { "type", "name", "range" 
+      "Gov", "Fundamentalism", "Player" 
+    }
+
 ; Disabled
 ;[effect_upkeep_shield2gold]
 ;type    = "Shield2Gold_Factor"
@@ -2666,6 +2885,17 @@ reqs    =
 ;      "OutputType", "shield", "Local"
 ;    }
 
+; Vision benefit from fortress watchtowers to Civilian units
+[effect_fortress_vision_civ]
+type    = "Unit_Vision_Radius_Sq"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Base", "Fortress", "tile"
+      "Tech", "Invention", "player"
+      "UnitClass", "Civilian", "Local"
+    }
+
 ; Airbase HP regen for air units
 [effect_airbase_hp_regen_a]
 type    = "HP_Regen"
@@ -2756,6 +2986,26 @@ value	= 3
 reqs   =
     { "type", "name", "range"
       "Gov", "Communism", "Player"
+      "Tech", "Mobile Warfare", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_fundamentalism_1]
+type   = "Unit_Upkeep_Free_Per_City"
+value  = 8
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "Tech", "Gunpowder", "Player"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_fundamentalism_2]
+type   = "Unit_Upkeep_Free_Per_City"
+value  = 8
+reqs   =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
       "Tech", "Mobile Warfare", "Player"
       "OutputType", "Shield", "Local"
     }
