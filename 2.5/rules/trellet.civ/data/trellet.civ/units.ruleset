@@ -845,7 +845,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "IgTer", "IgZOC"
+flags         = "IgTer", "IgZOC", "NoBuild"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
@@ -2593,7 +2593,7 @@ The Freight is twice as fast alternative to the Caravan, but unable to\
 name          = _("Explorer")
 class         = "Civilian"
 tech_req      = "Seafaring"
-obsolete_by   = "Partisan"
+obsolete_by   = "None"
 graphic       = "u.explorer"
 graphic_alt   = "-"
 sound_move    = "m_explorer"
@@ -2611,7 +2611,7 @@ vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
 flags         = "IgTer", "IgZOC", "NonMil"
