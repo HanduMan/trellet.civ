@@ -421,7 +421,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 0
-flags         = "Settlers", "NonMil", "AddToCity", "Cities"
+flags         = "Settlers", "NonMil", "AddToCity", "Cities", "Capturable"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -466,7 +466,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "Settlers", "NonMil", "Airbase"
+flags         = "Settlers", "NonMil", "Airbase", "Capturable"
 veteran_names             =
 ; /* TRANS: Worker veteran level */
   _("?worker_level:apprentice"),
@@ -533,7 +533,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Settlers", "NonMil", "Transform", "Airbase"
+flags         = "Settlers", "NonMil", "Transform", "Airbase", "Capturable"
 veteran_names             =
 ; /* TRANS: Worker veteran level */
   _("?worker_level:apprentice"),
@@ -582,7 +582,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Settlers", "NonMil", "Transform", "Airbase"
+flags         = "Settlers", "NonMil", "Transform", "Airbase", "Capturable"
 roles         = "Settlers"
 helptext      = _("\
 Naval Engineers are Engineers on special boats.\
@@ -613,7 +613,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = ""
+flags         = "Capturer"
 roles         = "DefendOk", "FirstBuild"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
@@ -645,7 +645,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = ""
+flags         = "Capturer"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 The Phalanx is armored infantry, suitable for defending your cities.\
@@ -676,7 +676,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = ""
+flags         = "Capturer"
 roles         = "DefendOk"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
@@ -708,7 +708,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = ""
+flags         = "Capturer"
 roles         = "DefendOk", "Hut", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
 Legions are heavily armed and well disciplined infantry\
@@ -744,7 +744,7 @@ bonuses       =
    { "flag", "type", "value"
      "Horse", "DefenseMultiplier", 1
    }
-flags         = ""
+flags         = "Capturer"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 Equipped with long pikes, Pikemen replaces Phalanx\
@@ -776,7 +776,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = ""
+flags         = "Capturer"
 roles         = "DefendGood", "FirstBuild", "HutTech",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
@@ -811,7 +811,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "Fanatic"
+flags         = "Fanatic", "Capturer"
 roles         = "DefendGood"
 helptext      = _("\
 Fanatics are warriors extremely devoted to a higher cause.\
@@ -845,7 +845,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "IgTer", "IgZOC", "NoBuild"
+flags         = "IgTer", "IgZOC", "NoBuild", "Capturer"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
@@ -885,7 +885,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "IgTer", "Shield2Gold"
+flags         = "IgTer", "Shield2Gold", "Capturer"
 roles         = "DefendGood"
 helptext      = _("\
 Alpine Troops are highly mobile units as well as\
@@ -917,7 +917,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Shield2Gold"
+flags         = "Shield2Gold", "Capturer"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 Riflemen are World War-era infantry, very good\
@@ -949,7 +949,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Marines", "Shield2Gold"
+flags         = "Marines", "Shield2Gold", "Capturer"
 roles         = "DefendOk", "BarbarianSeaTech"
 helptext      = _("\
 Marines are infantry who are experts at marine warfare.\
@@ -980,7 +980,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Paratroopers", "Shield2Gold"
+flags         = "Paratroopers", "Shield2Gold", "Capturer"
 roles         = "DefendOk"
 helptext      = _("\
 Paratroopers are experts at airborne attacks. \
@@ -1021,7 +1021,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Paratroopers", "Marines"
+flags         = "Paratroopers", "Marines", "Capturer"
 roles         = "DefendOk"
 helptext      = _("\
 Genetically engineered super soldiers.\
@@ -1057,7 +1057,7 @@ uk_shield     = 4
 uk_food       = 0
 uk_gold       = 0
 cargo         = "Missile"
-flags         = "Shield2Gold"
+flags         = "Shield2Gold", "Capturer"
 roles         = "DefendGood"
 helptext      = _("\
 The Mechanized Infantry has the strongest defensive strength\
@@ -1090,7 +1090,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "Horse"
+flags         = "Horse", "Capturer"
 roles         = "AttackFast", "Hut", "Barbarian", "Hunter"
 helptext      = _("\
 Horsemen are mounted warriors and an early\
@@ -1123,7 +1123,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "Horse"
+flags         = "Horse", "Capturer"
 roles         = "AttackFast", "Hut", "Hunter"
 helptext      = _("\
 Chariots are horse-pulled war wagons, stronger\
@@ -1155,7 +1155,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Horse"
+flags         = "Horse", "Capturer"
 roles         = "AttackFast", "Hut", "Hunter"
 helptext      = _("\
 Tank of the era.\
@@ -1186,7 +1186,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "Horse"
+flags         = "Horse", "Capturer"
 roles         = "AttackFast", "HutTech", "BarbarianTech",
                 "BarbarianBuildTech", "BarbarianSeaTech", "Hunter"
 helptext      = _("\
@@ -1218,7 +1218,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "Horse"
+flags         = "Horse", "Capturer"
 roles         = "AttackFast", "HutTech", "BarbarianTech",
                 "BarbarianBuildTech", "BarbarianSeaTech", "Hunter"
 helptext      = _("\
@@ -1250,7 +1250,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Horse"
+flags         = "Horse", "Capturer"
 roles         = "AttackFast", "BarbarianBuildTech", "BarbarianSeaTech",
                 "Hunter"
 helptext      = _("\
@@ -1282,7 +1282,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "Shield2Gold"
+flags         = "Shield2Gold", "Capturer"
 roles         = "AttackFast", "Hunter"
 helptext      = _("\
 Cavalry are mounted and highly trained soldiers.\
@@ -1313,7 +1313,7 @@ uk_happy      = 1
 uk_shield     = 4
 uk_food       = 0
 uk_gold       = 0
-flags         = "Shield2Gold"
+flags         = "Shield2Gold", "Capturer"
 roles         = "AttackFast", "Hunter"
 helptext      = _("\
 Armors are motorized war wagons that are faster,\
@@ -1347,7 +1347,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "OneAttack", "Bombarder", "NoVeteran"
+flags         = "OneAttack", "Bombarder", "Capturable", "NoVeteran"
 roles         = "AttackStrong"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -1381,7 +1381,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "OneAttack","Bombarder", "NoVeteran"
+flags         = "OneAttack","Bombarder", "Capturable", "NoVeteran"
 roles         = "AttackStrong", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy\
@@ -1416,7 +1416,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "OneAttack", "Bombarder", "NoVeteran", "Shield2Gold"
+flags         = "OneAttack", "Bombarder", "Capturable", "NoVeteran", "Shield2Gold"
 roles         = "AttackStrong"
 helptext      = _("\
 The artillery is an upgraded cannon. It is a very\
@@ -1450,7 +1450,7 @@ uk_happy      = 1
 uk_shield     = 4
 uk_food       = 0
 uk_gold       = 0
-flags         = "OneAttack", "Bombarder", "NoVeteran", "Shield2Gold"
+flags         = "OneAttack", "Bombarder", "Capturable", "NoVeteran", "Shield2Gold"
 roles         = "AttackStrong"
 helptext      = _("\
 Howitzers are upgraded artillery with improved\
@@ -2533,7 +2533,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "TradeRoute", "HelpWonder", "IgZOC", "NonMil"
+flags         = "TradeRoute", "HelpWonder", "IgZOC", "NonMil", "Capturable"
 roles         = ""
 helptext      = _("\
 A Caravan carries goods or material for trading with distant cities\
@@ -2582,7 +2582,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
-flags         = "TradeRoute", "HelpWonder", "IgZOC", "NonMil"
+flags         = "TradeRoute", "HelpWonder", "IgZOC", "NonMil", "Capturable"
 roles         = ""
 helptext      = _("\
 The Freight is twice as fast alternative to the Caravan, but unable to\
@@ -2614,7 +2614,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 0
-flags         = "IgTer", "IgZOC", "NonMil"
+flags         = "IgTer", "IgZOC", "NonMil", "Capturable"
 roles         = "Explorer"
 helptext      = _("\
 Explorers are brave individuals that are very useful for\
