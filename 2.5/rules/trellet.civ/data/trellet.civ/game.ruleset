@@ -354,7 +354,8 @@ colorlist =
      { "name", "value", "lock"
 		"saveturns", 1, FALSE
 		"savename", "megaciv_7", FALSE
-		"timeout", 43200, FALSE
+		"timeout", 82800, FALSE ; 23 hours
+		"first_timeout", 248400 ; 3 * 23 hours
 		"turnblock", TRUE, FALSE
 		"fixedlength", FALSE, FALSE
 		"nationset", "All", FALSE
@@ -364,32 +365,51 @@ colorlist =
 		"ec_chat", TRUE, FALSE
 		"ec_info", TRUE, FALSE
 
-		"mapsize", "PLAYER", FALSE
-;		"size", 8, FALSE
-		"tilesperplayer", 266, FALSE
+		"generator", "FRACTAL", FALSE
+		;	SCENARIO: "Scenario map"
+		;	RANDOM: "Fully random height"
+		;	FRACTAL: "Pseudo-fractal height"
+		;	ISLAND: "Island-based"
+		;	FAIR: "Fair islands"
+
+		"startpos", "ALL", FALSE
+		;	DEFAULT: "Generator's choice"
+		;	SINGLE: "One player per continent"
+		;	2or3: "Two or three players per continent"
+		;	ALL: "All players on a single continent"
+		;	VARIABLE: "Depending on size of continents"
+
+		"mapsize", "XYSIZE", FALSE
+		;	"Number of tiles" (FULLSIZE): Map area (option 'size').
+		;	"Tiles per player" (PLAYER): Number of (land) tiles per player (option 'tilesperplayer').
+		;	"Width and height" (XYSIZE): Map width and height in tiles (options 'xsize' and 'ysize').		
+
+		"size", 8, FALSE 				; If mapsize is FULLSIZE
+		"tilesperplayer", 266, FALSE 	; If mapsize is PLAYER
+		"xsize", 70, FALSE 				; If mapsize is XYSIZE
+		"ysize", 140, FALSE 			; If mapsize is XYSIZE
+		
 		"topology", "WRAPX|WRAPY|ISO|HEX", FALSE
 		"alltemperate", TRUE, FALSE
-		"temperature", 30, FALSE
-		"landmass", 37, FALSE
+		"temperature", 40, FALSE
+		"landmass", 50, FALSE
 		"steepness", 20, FALSE
-		"wetness", 30, FALSE
-		"specials", 25, FALSE
+		"wetness", 35, FALSE
+		"specials", 20, FALSE
 		"huts", 0, FALSE
+		"tinyisles", FALSE, FALSE
+		"startunits", "ccccxwww", FALSE
+		"dispersion", 1, FALSE
+
 		"globalwarming", TRUE, FALSE
 		"nuclearwinter", TRUE, FALSE
-
 		"barbarians", "DISABLED", TRUE
+		"aifill", 0, FALSE
 
-		"generator", "FRACTAL", FALSE
-		"startpos", "ALL", FALSE
-;		"generator", "ISLAND", FALSE
-;		"startpos", "SINGLE", FALSE
-		"startunits", "ccccxwww", FALSE
-		"dispersion", 3, FALSE
-
-		"rapturedelay", 5, FALSE
 		"citynames", "NO_STEALING", FALSE
 		"citymindist", 4, FALSE
+		"foodbox", 100, FALSE
+		"shieldbox", 100, FALSE
 		"fulltradesize", 7, FALSE
 		"notradesize", 2, FALSE
 		"airliftingstyle", "TO_ALLIES|FROM_ALLIES", FALSE
@@ -405,41 +425,50 @@ colorlist =
 		"foggedborders", TRUE, FALSE
 		"fogofwar", TRUE, FALSE
 		"revolen", 2, FALSE
+		"disasters", 2, FALSE
+		"rapturedelay", 5, FALSE
 
-      "techlost_recv", 5, FALSE
-      "techlost_donor", 3, FALSE
-      "techlossforgiveness", 15, FALSE
-      "techlossrestore", 50, FALSE
+		"trading_city", TRUE, FALSE
+		"trading_gold", TRUE, FALSE
+		"trading_tech", TRUE, FALSE
+
+		"techlost_recv", 5, FALSE
+		"techlost_donor", 3, FALSE
+		"techlossforgiveness", 107, FALSE
+		"techlossrestore", -1, FALSE	; Always to zero
 		"sciencebox", 120, FALSE
 		"techpenalty", 0, FALSE
-		"diplcost", 50, FALSE
+		"diplcost", 25, FALSE
+		"conquercost", 25, FALSE
 		"contactturns", 50, FALSE
 		"diplomacy", "HUMAN", FALSE
 		"diplchance", 50, FALSE
 		"restrictinfra", TRUE, FALSE
 		"unreachableprotects", FALSE, FALSE
-		"homecaughtunits", FALSE, FALSE
+		"homecaughtunits", TRUE, FALSE
 ;		"killunhomed", 10, FALSE
 		"killstack", FALSE, FALSE
 		"timeaddenemymove", 30, FALSE
 		"unitwaittime", 0, FALSE ; (6420 would give 107 minutes.)
+		"savepalace", TRUE, FALSE
 
 		"endturn", 1000, FALSE
 		"spacerace", TRUE, FALSE
-		"endspaceship", TRUE, FALSE
-		"demography", "Oqrb", FALSE
+		"endspaceship", FALSE, FALSE
+		"alliedvictory", TRUE, FALSE
+		"demography", "LAPSENbrMORq", FALSE
 		"scorelog", TRUE, FALSE
-		"scorefile", "megaciv_score.log", FALSE
+		"scorefile", "megaciv_7_score.log", FALSE
+		"revealmap", "DEAD", FALSE
 
 		"allowtake", "b", FALSE
 
 		; uncomment for a test game:
 		"savename", "trellet_civ_test_7", FALSE
-		"scorefile", "trellet_civ_score.log", FALSE
+		"scorefile", "trellet_civ_test_7_score.log", FALSE
 		"unitwaittime", 0, FALSE 
-		"timeout", 3420, FALSE
+		"timeout", 1800, FALSE
 		"diplomacy", "ALL", FALSE
-		"demography", "NPALRSEMOqrb", FALSE
 		"allowtake", "oObdaAhH", FALSE
 		"aifill", 14, FALSE
      }
