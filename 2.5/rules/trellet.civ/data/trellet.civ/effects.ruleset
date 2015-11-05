@@ -2148,10 +2148,8 @@ reqs	=
 name	= "Enable_Space"
 value	= 1
 reqs	=
-; Ideally we'd want this to be a "surviving" effect, but these aren't
-; currently supported for small wonders. Instead we use SaveSmallWonder.
-    { "type", "name", "range"
-      "Building", "Apollo Program", "Player"
+    { "type", "name", "range", "survives"
+      "Building", "Apollo Program", "World", TRUE
     }
 
 [effect_asmiths_trading_co]
@@ -2932,9 +2930,10 @@ reqs	=
       "Building", "University", "City"
     }
 
-[effect_nuke_OK]
-type   = "Enable_Nuke"
-value   = 1
+; Requires Manhattan project
+;[effect_nuke_OK]
+;type   = "Enable_Nuke"
+;value   = 1
 
 ; Requires Apollo program
 ;[effect_space_race]

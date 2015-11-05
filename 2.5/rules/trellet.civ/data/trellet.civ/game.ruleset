@@ -126,7 +126,7 @@ base_tech_cost   = 17
 ;     (human, AI and barbarians) which already know the tech.
 ; 3 - Technology cost is reduced depending on the number of normal
 ;     players (human and AI) which already know the tech.
-tech_leakage = 0
+tech_leakage = 3
 
 [illness]
 ; Whether plagues (illness) are possible
@@ -239,27 +239,36 @@ negative_label = _("BCE")
 
 [disaster_earthquake]
 name           = _("Earthquake")
-frequency      = 10
+frequency      = 5
 effects        = "DestroyBuilding"
 
-[disaster_plague]
-name           = _("Plague")
-frequency      = 10
+[disaster_pestilence]
+name           = _("Pestilence")
+frequency      = 5
 effects        = "ReducePopulation"
 
 [disaster_fire]
 name           = _("Fire")
-frequency      = 10
+frequency      = 5
 effects        = "DestroyBuilding"
+
+[disaster_nuclear_disaster]
+name           = _("Nuclear Disaster")
+reqs           =
+    { "type", "name", "range"
+      "Building", "Nuclear Plant", "City"
+    }
+frequency      = 5
+effects        = "ReducePopulation", "Fallout"
 
 [disaster_nuclear_accident]
 name           = _("Nuclear Accident")
 reqs           =
     { "type", "name", "range"
-      "Building", "Nuclear Plant", "City"
+      "Building", "Missile Silo", "City"
     }
-frequency      = 10
-effects        = "ReducePopulation", "Fallout"
+frequency      = 20
+effects        = "ReducePopulation", "DestroyBuilding", "Fallout"
 
 ;
 ; Trade settings
@@ -401,6 +410,7 @@ colorlist =
 		"startunits", "ccccxwww", FALSE
 		"dispersion", 1, FALSE
 
+		"disasters", 5, FALSE
 		"globalwarming", TRUE, FALSE
 		"nuclearwinter", TRUE, FALSE
 		"barbarians", "DISABLED", TRUE
@@ -425,21 +435,20 @@ colorlist =
 		"foggedborders", TRUE, FALSE
 		"fogofwar", TRUE, FALSE
 		"revolen", 2, FALSE
-		"disasters", 2, FALSE
 		"rapturedelay", 5, FALSE
 
 		"trading_city", TRUE, FALSE
 		"trading_gold", TRUE, FALSE
 		"trading_tech", TRUE, FALSE
 
-		"techlost_recv", 5, FALSE
-		"techlost_donor", 3, FALSE
+		"techlost_recv", 3, FALSE
+		"techlost_donor", 1, FALSE
 		"techlossforgiveness", 107, FALSE
 		"techlossrestore", -1, FALSE	; Always to zero
 		"sciencebox", 120, FALSE
 		"techpenalty", 0, FALSE
 		"diplcost", 25, FALSE
-		"conquercost", 25, FALSE
+		"conquercost", 33, FALSE
 		"contactturns", 50, FALSE
 		"diplomacy", "HUMAN", FALSE
 		"diplchance", 50, FALSE

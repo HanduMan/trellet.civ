@@ -59,8 +59,8 @@ options="+Freeciv-2.5-ruleset"
 
 [building_apollo_program]
 name		= _("Apollo Program")
-genus		= "SmallWonder"
-flags		= "SaveSmallWonder"
+genus		= "GreatWonder"
+flags		= ""
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Flight", "Player"
@@ -74,8 +74,8 @@ sabotage	= 0
 sound		= "w_apollo_program"
 sound_alt	= "w_generic"
 helptext	= _("\
-Allows you to start building spaceship parts in cities\
- with factories (assuming you have researched the necessary\
+Allows everyone to start building spaceship parts in cities\
+ with factories (assuming they have researched the necessary\
  technologies).\
 ")
 
@@ -1180,7 +1180,7 @@ Space Components can be differentiated into Propulsion and Fuel\
  time.  You can build up to 8 pairs.\
 "), _("\
 Before you can build any spaceship parts,\
- you must first build the Apollo Program small wonder.\
+ someone must first have built the Apollo Program wonder.\
 ")
 
 [building_space_module]
@@ -1214,7 +1214,7 @@ Space Modules are the most expensive parts of spaceships.  There\
 You can build up to 4 Space Modules of each kind.\
 "), _("\
 Before you can build any spaceship parts,\
- you must first build the Apollo Program small wonder.\
+ someone must first have built the Apollo Program wonder.\
 ")
 
 [building_space_structural]
@@ -1239,7 +1239,7 @@ Space Structurals form the base of your spaceship.  All other\
  function.  You can build up to 32 Space Structurals.\
 "), _("\
 Before you can build any spaceship parts,\
- you must first build the Apollo Program small wonder.\
+ someone must first have built the Apollo Program wonder.\
 ")
 
 [building_stock_exchange]
@@ -1365,6 +1365,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Rocketry", "Player"
+      "Building", "Manhattan Project", "World"
     }
 graphic	= "b.missile_silo"
 graphic_alt	= "b.manhattan_project"
@@ -1540,7 +1541,6 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
-      "Tech", "Wonder Building", "Player"
     }
 graphic	= "b.manhattan_project"
 graphic_alt	= "-"
