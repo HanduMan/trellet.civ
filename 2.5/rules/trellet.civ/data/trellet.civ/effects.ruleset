@@ -129,7 +129,7 @@ reqs	=
       "UnitClass", "Sea", "Local"
     }
 
-[effect_anarchy_upkeep]
+[effect_anarchy_upkeep_free]
 type    = "Upkeep_Free"
 value	= 99
 reqs	=
@@ -145,7 +145,7 @@ reqs    =
       "Gov", "Anarchy", "Player"
     }
 
-[effect_republic]
+[effect_mil_content_republic]
 type    = "Make_Content_Mil"
 value	= 1
 reqs	=
@@ -245,7 +245,7 @@ reqs	=
       "Gov", "Democracy", "Player"
     }
 
-[effect_corruption_anarchy0]
+[effect_corruption_anarchy]
 type    = "Output_Waste"
 value	= 25
 reqs	=
@@ -254,7 +254,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_anarchy1]
+[effect_corruption_anarchy_distance]
 type    = "Output_Waste_By_Distance"
 value	= 2
 reqs	=
@@ -263,7 +263,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_despotism0]
+[effect_corruption_despotism]
 type    = "Output_Waste"
 value	= 37
 reqs	=
@@ -272,7 +272,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_despotism1]
+[effect_corruption_despotism_distance]
 type    = "Output_Waste_By_Distance"
 value	= 4
 reqs	=
@@ -281,7 +281,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_monarchy0]
+[effect_corruption_monarchy]
 type    = "Output_Waste"
 value	= 15
 reqs	=
@@ -290,7 +290,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_monarchy1]
+[effect_corruption_monarchy_distance]
 type    = "Output_Waste_By_Distance"
 value	= 2
 reqs	=
@@ -299,7 +299,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_communism0]
+[effect_corruption_communism]
 type    = "Output_Waste"
 value	= 20
 reqs	=
@@ -308,7 +308,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_republic0]
+[effect_corruption_republic]
 type    = "Output_Waste"
 value	= 15
 reqs	=
@@ -317,7 +317,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_republic1]
+[effect_corruption_republic_distance]
 type    = "Output_Waste_By_Distance"
 value	= 2
 reqs	=
@@ -326,7 +326,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_fundamentalism0]
+[effect_corruption_fundamentalism]
 type    = "Output_Waste"
 value   = 2
 reqs    =
@@ -335,7 +335,7 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
-[effect_corruption_fundamentalism1]
+[effect_corruption_fundamentalism_distance]
 type    = "Output_Waste_By_Distance"
 value   = 2
 reqs    =
@@ -344,7 +344,7 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
-[effect_waste_anarchy0]
+[effect_waste_anarchy]
 type    = "Output_Waste"
 value   = 37
 reqs    =
@@ -353,7 +353,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_anarchy1]
+[effect_waste_anarchy_distance]
 type    = "Output_Waste_By_Distance"
 value   = 1
 reqs    =
@@ -362,7 +362,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_despotism0]
+[effect_waste_despotism]
 type    = "Output_Waste"
 value   = 30
 reqs    =
@@ -371,7 +371,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_despotism1]
+[effect_waste_despotism_distance]
 type    = "Output_Waste_By_Distance"
 value   = 2
 reqs    =
@@ -380,7 +380,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_monarchy0]
+[effect_waste_monarchy]
 type    = "Output_Waste"
 value   = 25
 reqs    =
@@ -389,7 +389,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_monarchy1]
+[effect_waste_monarchy_distance]
 type    = "Output_Waste_By_Distance"
 value   = 1
 reqs    =
@@ -398,7 +398,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_communism0]
+[effect_waste_communism]
 type    = "Output_Waste"
 value   = 3
 reqs    =
@@ -407,7 +407,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_republic0]
+[effect_waste_republic]
 type    = "Output_Waste"
 value   = 6
 reqs    =
@@ -416,7 +416,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_republic1]
+[effect_waste_republic_distance]
 type    = "Output_Waste_By_Distance"
 value   = 1
 reqs    =
@@ -425,7 +425,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_fundamentalism0]
+[effect_waste_fundamentalism]
 type    = "Output_Waste"
 value   = 2
 reqs    =
@@ -434,7 +434,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_waste_fundamentalism1]
+[effect_waste_fundamentalism_distance]
 type    = "Output_Waste_By_Distance"
 value   = 1
 reqs    =
@@ -544,7 +544,7 @@ reqs   =
       "OutputType", "Shield", "Local"
     }
 
-[effect_civil_war_0]
+[effect_civil_war_Anarchy]
 type    = "Civil_War_Chance"
 value   = 90
 reqs	=
@@ -552,7 +552,7 @@ reqs	=
       "Gov", "Anarchy",   "Player"
     }
 
-[effect_civil_war_1]
+[effect_civil_war_Despotism]
 type    = "Civil_War_Chance"
 value   = 80
 reqs	=
@@ -560,7 +560,7 @@ reqs	=
       "Gov", "Despotism", "Player"
     }
 
-[effect_civil_war_2]
+[effect_civil_war_Monarchy]
 type    = "Civil_War_Chance"
 value   = 70
 reqs	=
@@ -568,7 +568,7 @@ reqs	=
       "Gov", "Monarchy",  "Player"
     }
 
-[effect_civil_war_3]
+[effect_civil_war_Communism]
 type    = "Civil_War_Chance"
 value   = 50
 reqs	=
@@ -576,7 +576,7 @@ reqs	=
       "Gov", "Communism", "Player"
     }
 
-[effect_civil_war_4]
+[effect_civil_war_Republic]
 type    = "Civil_War_Chance"
 value   = 40
 reqs	=
@@ -584,7 +584,7 @@ reqs	=
       "Gov", "Republic",  "Player"
     }
 
-[effect_civil_war_5]
+[effect_civil_war_Democracy]
 type    = "Civil_War_Chance"
 value   = 30
 reqs	=
@@ -592,7 +592,7 @@ reqs	=
       "Gov", "Democracy", "Player"
     }
 
-[effect_civil_war_6]
+[effect_civil_war_Fundamentalism]
 type    = "Civil_War_Chance"
 value   = 66;6
 reqs	=
@@ -600,113 +600,119 @@ reqs	=
       "Gov", "Fundamentalism", "Player"
     }
 
-[effect_empire_size_base_0]
+[effect_empire_size_base_Anarchy]
 type    = "Empire_Size_Base"
-value   = 9
+value   = 0
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Anarchy",   "Player"
     }
 
-[effect_empire_size_base_1]
+[effect_empire_size_base_Despotism]
 type    = "Empire_Size_Base"
-value   = 10
+value   = 6
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Despotism", "Player"
     }
 
-[effect_empire_size_base_2]
+[effect_empire_size_base_Monarchy]
 type    = "Empire_Size_Base"
-value   = 11
+value   = 8
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Monarchy",  "Player"
     }
 
-[effect_empire_size_base_3]
+[effect_empire_size_base_Communism]
 type    = "Empire_Size_Base"
-value   = 12
+value   = 9
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Communism", "Player"
     }
 
-[effect_empire_size_base_4]
+[effect_empire_size_base_Republic]
 type    = "Empire_Size_Base"
-value   = 13
+value   = 8
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Republic",  "Player"
     }
 
-[effect_empire_size_base_5]
+[effect_empire_size_base_Democracy]
 type    = "Empire_Size_Base"
-value   = 14
+value   = 10
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Democracy",  "Player"
     }
 
-[effect_empire_size_base_6]
+[effect_empire_size_base_Fundamentalism]
 type    = "Empire_Size_Base"
-value   = 14
+value   = 8
 reqs    =
     { "type",       "name",      "range"
       "Gov", "Fundamentalism",  "Player"
     }
 
-[effect_empire_size_step_0]
+[effect_empire_size_step_Anarchy]
 type    = "Empire_Size_Step"
-value   = 6
+value   = 0
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Anarchy", "Player"
     }
 
-[effect_empire_size_step_1]
+[effect_empire_size_step_Despotism]
 type    = "Empire_Size_Step"
-value   = 10
+value   = 4
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Despotism", "Player"
     }
 
-[effect_empire_size_step_2]
+[effect_empire_size_step_Monarchy]
 type    = "Empire_Size_Step"
-value   = 12
+value   = 8
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Monarchy", "Player"
     }
 
-; Empire_Size_Step disabled for Communism
-
-[effect_empire_size_step_4]
+[effect_empire_size_step_Communism]
 type    = "Empire_Size_Step"
-value   = 14
+value   = 12
+reqs	=
+    { "type",       "name",      "range"
+      "Gov", "Communism",  "Player"
+    }
+
+[effect_empire_size_step_Republic]
+type    = "Empire_Size_Step"
+value   = 9
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Republic",  "Player"
     }
 
-[effect_empire_size_step_5]
+[effect_empire_size_step_Democracy]
 type    = "Empire_Size_Step"
-value   = 16
+value   = 12
 reqs	=
     { "type",       "name",      "range"
       "Gov", "Democracy", "Player"
     }
 
-[effect_empire_size_step_6]
+[effect_empire_size_step_Fundamentalism]
 type    = "Empire_Size_Step"
-value   = 12
+value   = 10
 reqs    =
     { "type",       "name",      "range"
       "Gov", "Fundamentalism", "Player"
     }
 
-[effect_max_rates_0]
+[effect_max_rates_Anarchy]
 type    = "Max_Rates"
 value   = 100
 reqs	=
@@ -714,7 +720,7 @@ reqs	=
       "Gov", "Anarchy",   "Player"
     }
 
-[effect_max_rates_1]
+[effect_max_rates_Despotism]
 type    = "Max_Rates"
 value   = 60
 reqs	=
@@ -722,7 +728,7 @@ reqs	=
       "Gov", "Despotism", "Player"
     }
 
-[effect_max_rates_2]
+[effect_max_rates_Monarchy]
 type    = "Max_Rates"
 value   = 70
 reqs	=
@@ -730,7 +736,7 @@ reqs	=
       "Gov", "Monarchy",  "Player"
     }
 
-[effect_max_rates_3]
+[effect_max_rates_Communism]
 type    = "Max_Rates"
 value   = 80
 reqs	=
@@ -738,7 +744,7 @@ reqs	=
       "Gov", "Communism", "Player"
     }
 
-[effect_max_rates_4]
+[effect_max_rates_Republic]
 type    = "Max_Rates"
 value   = 80
 reqs	=
@@ -746,7 +752,7 @@ reqs	=
       "Gov", "Republic",  "Player"
     }
 
-[effect_max_rates_5]
+[effect_max_rates_Democracy]
 type    = "Max_Rates"
 value   = 100
 reqs	=
@@ -754,7 +760,7 @@ reqs	=
       "Gov", "Democracy", "Player"
     }
 
-[effect_max_rates_6]
+[effect_max_rates_Fundamentalism]
 type    = "Max_Rates"
 value   = 80
 reqs    =
@@ -762,7 +768,7 @@ reqs    =
       "Gov", "Fundamentalism", "Player"
     }
 
-[effect_martial_law_each_0]
+[effect_martial_law_each_Anarchy]
 type    = "Martial_Law_Each"
 value   = 1
 reqs	=
@@ -770,7 +776,7 @@ reqs	=
       "Gov", "Anarchy",   "Player"
     }
 
-[effect_martial_law_each_1]
+[effect_martial_law_each_Despotism]
 type    = "Martial_Law_Each"
 value   = 1
 reqs	=
@@ -778,7 +784,7 @@ reqs	=
       "Gov", "Despotism", "Player"
     }
 
-[effect_martial_law_each_2]
+[effect_martial_law_each_Monarchy]
 type    = "Martial_Law_Each"
 value   = 1
 reqs	=
@@ -786,7 +792,7 @@ reqs	=
       "Gov", "Monarchy",  "Player"
     }
 
-[effect_martial_law_each_3]
+[effect_martial_law_each_Communism]
 type    = "Martial_Law_Each"
 value   = 2
 reqs	=
@@ -794,7 +800,7 @@ reqs	=
       "Gov", "Communism", "Player"
     }
 
-[effect_martial_law_max_0]
+[effect_martial_law_max_Anarchy]
 type    = "Martial_Law_Max"
 value   = 100
 reqs	=
@@ -802,7 +808,7 @@ reqs	=
       "Gov", "Anarchy",   "Player"
     }
 
-[effect_martial_law_max_1]
+[effect_martial_law_max_Despotism]
 type    = "Martial_Law_Max"
 value   = 100
 reqs	=
@@ -810,7 +816,7 @@ reqs	=
       "Gov", "Despotism", "Player"
     }
 
-[effect_martial_law_max_2]
+[effect_martial_law_max_Monarchy]
 type    = "Martial_Law_Max"
 value   = 3
 reqs	=
@@ -818,7 +824,7 @@ reqs	=
       "Gov", "Monarchy",  "Player"
     }
 
-[effect_martial_law_max_3]
+[effect_martial_law_max_Communism]
 type    = "Martial_Law_Max"
 value   = 3
 reqs	=
@@ -826,7 +832,7 @@ reqs	=
       "Gov", "Communism", "Player"
     }
 
-[effect_rapture_grow_0]
+[effect_rapture_grow_Republic]
 type    = "Rapture_Grow"
 value   = 3
 reqs	=
@@ -834,7 +840,7 @@ reqs	=
       "Gov", "Republic",  "Player"
     }
 
-[effect_rapture_grow_1]
+[effect_rapture_grow_Democracy]
 type    = "Rapture_Grow"
 value   = 3
 reqs	=
@@ -842,7 +848,7 @@ reqs	=
       "Gov", "Democracy", "Player"
     }
 
-[effect_democracy_0]
+[effect_democracy_untouchable]
 type    = "Unbribable_Units"
 value   = 1
 reqs	=
@@ -850,7 +856,7 @@ reqs	=
       "Gov", "Democracy", "Player"
     }
 
-[effect_democracy_1]
+[effect_democracy_loyality]
 type    = "No_Incite"
 value   = 1
 reqs	=
@@ -858,7 +864,7 @@ reqs	=
       "Gov", "Democracy", "Player"
     }
 
-[effect_communism_0]
+[effect_veteran_diplomats_Communism]
 type    = "Veteran_Build"
 value   = 1
 reqs	=
@@ -867,7 +873,7 @@ reqs	=
       "UnitFlag", "Diplomat", "Local"
     }
 
-[effect_gov_tile_bonus_0]
+[effect_gov_tile_bonus_Anarchy]
 type    = "Output_Penalty_Tile"
 value   = 2
 reqs	=
@@ -879,7 +885,7 @@ nreqs   =
       "Building", "Pyramids", "Player"
     }
 
-[effect_gov_tile_bonus_1]
+[effect_gov_tile_bonus_Despotism]
 type    = "Output_Penalty_Tile"
 value   = 2
 reqs	=
@@ -891,7 +897,7 @@ nreqs   =
       "Building", "Pyramids", "Player"
     }
 
-[effect_gov_tile_bonus_2]
+[effect_gov_tile_bonus_Monarchy]
 type    = "Output_Inc_Tile_Celebrate"
 value   = 1
 reqs	=
@@ -900,7 +906,7 @@ reqs	=
       "Gov", "Monarchy", "Player"
     }
 
-[effect_gov_tile_bonus_3]
+[effect_gov_tile_bonus_Communism]
 type    = "Output_Inc_Tile_Celebrate"
 value   = 1
 reqs	=
@@ -909,7 +915,7 @@ reqs	=
       "Gov", "Communism", "Player"
     }
 
-[effect_gov_tile_bonus_4]
+[effect_gov_tile_bonus_Republic]
 type    = "Output_Inc_Tile"
 value   = 1
 reqs	=
@@ -918,7 +924,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_gov_tile_bonus_5]
+[effect_gov_tile_bonus_Democracy]
 type    = "Output_Inc_Tile"
 value   = 1
 reqs	=
@@ -927,7 +933,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_gov_tile_bonus_6]
+[effect_gov_tile_bonus_Fundamentalism]
 type    = "Output_Inc_Tile_Celebrate"
 value   = 1
 reqs  =
@@ -936,7 +942,7 @@ reqs  =
       "OutputType", "Trade", "Local"
     }
 
-[effect_revolution_0]
+[effect_revolution_Democracy]
 type    = "Revolution_When_Unhappy"
 value   = 1
 reqs	=
@@ -944,7 +950,7 @@ reqs	=
       "Gov", "Democracy", "Player"
     }
 
-[effect_senate_0]
+[effect_senate_Republic]
 type    = "Has_Senate"
 value   = 1
 reqs	=
@@ -952,7 +958,7 @@ reqs	=
       "Gov", "Republic",  "Player"
     }
 
-[effect_senate_1]
+[effect_senate_Democracy]
 type    = "Has_Senate"
 value   = 1
 reqs	=
@@ -992,7 +998,7 @@ nreqs  =
       "Nation", "Pirate", "Player"
     }
 
-[effect_fundamentalism]
+[effect_fundamentalism_science_is_evil]
 type    = "Output_Bonus_2"
 value   = -50
 reqs    =
@@ -1001,7 +1007,7 @@ reqs    =
       "OutputType", "science", "local"
     }
 
-[effect_airport]
+[effect_airport_vet_air]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -1015,7 +1021,7 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_airport_0a]
+[effect_airport_vet_heli]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -1029,7 +1035,7 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_airport_0b]
+[effect_airport_vet_missile]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -1043,7 +1049,7 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_airport_1]
+[effect_airport_heal_air]
 type    = "HP_Regen"
 value	= 100
 reqs	=
@@ -1052,7 +1058,7 @@ reqs	=
       "UnitClass", "Air", "Local"
     }
 
-[effect_airport_1a]
+[effect_airport_heal_heli]
 type    = "HP_Regen"
 value	= 100
 reqs	=
@@ -1061,7 +1067,7 @@ reqs	=
       "UnitClass", "Helicopter", "Local"
     }
 
-[effect_airport_2]
+[effect_airport_airlift]
 type    = "Airlift"
 value	= 1
 reqs	=
@@ -1090,7 +1096,7 @@ reqs	=
       "Building", "Aqueduct", "City"
     }
 
-[effect_bank]
+[effect_bank_gold]
 type    = "Output_Bonus"
 value	= 50
 reqs	=
@@ -1100,7 +1106,7 @@ reqs	=
       "OutputType", "Gold", "Local"
     }
 
-[effect_bank_1]
+[effect_bank_lux]
 type    = "Output_Bonus"
 value	= 50
 reqs	=
@@ -1110,7 +1116,7 @@ reqs	=
       "OutputType", "Luxury", "Local"
     }
 
-[effect_barracks]
+[effect_barracks_vet_land]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -1126,7 +1132,7 @@ nreqs   =
       "Building", "Barracks III", "City"
     }
 
-[effect_barracks_bl]
+[effect_barracks_vet_big]
 type    = "Veteran_Build"
 value   = 1
 reqs    =
@@ -1142,7 +1148,7 @@ nreqs   =
       "Building", "Barracks III", "City"
     }
 
-[effect_barracks_1]
+[effect_barracks_heal_land]
 type    = "HP_Regen"
 value	= 100
 reqs	=
@@ -1156,7 +1162,7 @@ nreqs   =
       "Building", "Barracks III", "City"
     }
 
-[effect_barracks_bl_1]
+[effect_barracks_heal_big]
 type    = "HP_Regen"
 value   = 100
 reqs    =
@@ -1170,7 +1176,7 @@ nreqs   =
       "Building", "Barracks III", "City"
     }
 
-[effect_barracks_ii]
+[effect_barracks_ii_vet_land]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -1185,7 +1191,7 @@ nreqs   =
       "Building", "Barracks III", "City"
     }
 
-[effect_barracks_ii_bl]
+[effect_barracks_ii_vet_big]
 type    = "Veteran_Build"
 value   = 1
 reqs    =
@@ -1200,7 +1206,7 @@ nreqs   =
       "Building", "Barracks III", "City"
     }
 
-[effect_barracks_ii_1]
+[effect_barracks_ii_heal_land]
 type    = "HP_Regen"
 value	= 100
 reqs	=
@@ -1213,7 +1219,7 @@ nreqs   =
       "Building", "Barracks III", "City"
     }
 
-[effect_barracks_ii_bl_1]
+[effect_barracks_ii_heal_big]
 type    = "HP_Regen"
 value   = 100
 reqs    =
@@ -1226,7 +1232,7 @@ nreqs   =
       "Building", "Barracks III", "City"
     }
 
-[effect_barracks_iii]
+[effect_barracks_iii_vet_land]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -1240,7 +1246,7 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_barracks_iii_bl]
+[effect_barracks_iii_vet_big]
 type    = "Veteran_Build"
 value   = 1
 reqs    =
@@ -1254,7 +1260,7 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_barracks_iii_1]
+[effect_barracks_iii_heal_land]
 type    = "HP_Regen"
 value	= 100
 reqs	=
@@ -1263,7 +1269,7 @@ reqs	=
       "UnitClass", "Land", "Local"
     }
 
-[effect_barracks_iii_bl_1]
+[effect_barracks_iii_heal_big]
 type    = "HP_Regen"
 value   = 100
 reqs    =
@@ -1272,7 +1278,7 @@ reqs    =
       "UnitClass", "Big Land", "Local"
     }
 
-[effect_cathedral]
+[effect_cathedral_base]
 type    = "Make_Content"
 value	= 3
 reqs	=
@@ -1284,7 +1290,7 @@ nreqs	=
       "Building", "Michelangelo's Chapel", "Player"
     }
 
-[effect_cathedral_1]
+[effect_cathedral_theology]
 type    = "Make_Content"
 value	= 1
 reqs	=
@@ -1297,7 +1303,7 @@ nreqs	=
       "Building", "Michelangelo's Chapel", "Player"
     }
 
-[effect_cathedral_2]
+[effect_cathedral_communism]
 type    = "Make_Content"
 value	= -1
 reqs	=
@@ -1310,7 +1316,7 @@ nreqs	=
       "Building", "Michelangelo's Chapel", "Player"
     }
 
-[effect_city_walls]
+[effect_city_walls_def_land]
 type    = "Defend_Bonus"
 value	= 100
 reqs	=
@@ -1323,7 +1329,7 @@ nreqs	=
       "Building", "Great Wall", "Player"
     }
 
-[effect_city_walls_0]
+[effect_city_walls_def_heli]
 type    = "Defend_Bonus"
 value	= 100
 reqs	=
@@ -1336,7 +1342,7 @@ nreqs	=
       "Building", "Great Wall", "Player"
     }
 
-[effect_city_walls_1]
+[effect_city_walls_save_lives]
 type    = "Unit_No_Lose_Pop"
 value	= 1
 reqs	=
@@ -1370,7 +1376,7 @@ reqs	=
       "UnitClass", "Trireme", "Local"
     }
 
-[effect_colosseum]
+[effect_colosseum_base]
 type    = "Make_Content"
 value	= 3
 reqs	=
@@ -1378,7 +1384,7 @@ reqs	=
       "Building", "Colosseum", "City"
     }
 
-[effect_colosseum_1]
+[effect_colosseum_electricity]
 type    = "Make_Content"
 value	= 1
 reqs	=
@@ -1387,7 +1393,7 @@ reqs	=
       "Building", "Colosseum", "City"
     }
 
-[effect_courthouse]
+[effect_courthouse_corruption]
 type    = "Output_Waste_Pct"
 value	= 50
 reqs	=
@@ -1400,7 +1406,7 @@ nreqs	=
       "Building", "Palace", "City"
     }
 
-[effect_courthouse_1]
+[effect_courthouse_waste]
 type    = "Output_Waste_Pct"
 value	= 50
 reqs	=
@@ -1413,7 +1419,7 @@ nreqs	=
       "Building", "Palace", "City"
     }
 
-[effect_courthouse_2]
+[effect_courthouse_content_Democracy]
 type    = "Make_Content"
 value	= 1
 reqs	=
@@ -1422,7 +1428,7 @@ reqs	=
       "Building", "Courthouse", "City"
     }
 
-[effect_courthouse_3]
+[effect_courthouse_incite_cost]
 type    = "Incite_Cost_Pct"
 value	= 300
 reqs	=
@@ -1465,7 +1471,7 @@ reqs   =
      "Building", "Hospital", "City"
     }
 
-[effect_hydro_plant]
+[effect_hydro_plant_factory_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -1481,7 +1487,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_hydro_plant_1]
+[effect_hydro_plant_mfg_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -1497,7 +1503,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_hydro_plant_2]
+[effect_hydro_plant_factory_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -25
 reqs	=
@@ -1513,7 +1519,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_hydro_plant_3]
+[effect_hydro_plant_mfg_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -25
 reqs	=
@@ -1556,7 +1562,7 @@ reqs	=
       "OutputType", "Science", "Local"
     }
 
-[effect_marketplace]
+[effect_marketplace_gold]
 type    = "Output_Bonus"
 value	= 50
 reqs	=
@@ -1565,7 +1571,7 @@ reqs	=
       "OutputType", "Gold", "Local"
     }
 
-[effect_marketplace_1]
+[effect_marketplace_lux]
 type    = "Output_Bonus"
 value	= 50
 reqs	=
@@ -1591,7 +1597,7 @@ reqs	=
       "OutputType", "Shield", "Local"
     }
 
-[effect_nuclear_plant]
+[effect_nuclear_plant_factory_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -1606,7 +1612,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_nuclear_plant_1]
+[effect_nuclear_plant_mfg_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -1621,7 +1627,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_nuclear_plant_2]
+[effect_nuclear_plant_factory_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -25
 reqs	=
@@ -1636,7 +1642,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_nuclear_plant_3]
+[effect_nuclear_plant_mfg_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -25
 reqs	=
@@ -1661,7 +1667,7 @@ reqs	=
       "OutputType", "Shield", "Local"
     }
 
-[effect_palace]
+[effect_palace_corruption]
 type    = "Output_Waste_Pct"
 value	= 50
 reqs	=
@@ -1670,7 +1676,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_palace_1]
+[effect_palace_waste]
 type    = "Output_Waste_Pct"
 value	= 50
 reqs	=
@@ -1679,7 +1685,7 @@ reqs	=
       "OutputType", "Shield", "Local"
     }
 
-[effect_palace_2]
+[effect_palace_anti_spy]
 type    = "Spy_Resistant"
 value	= 50
 reqs	=
@@ -1687,7 +1693,7 @@ reqs	=
       "Building", "Palace", "City"
     }
 
-[effect_palace_3]
+[effect_palace_untouchable]
 type    = "No_Incite"
 value	= 1
 reqs	=
@@ -1695,7 +1701,7 @@ reqs	=
       "Building", "Palace", "City"
     }
 
-[effect_palace_4]
+[effect_palace_capital]
 type    = "Capital_City"
 value	= 1
 reqs	=
@@ -1711,7 +1717,7 @@ reqs	=
       "Building", "Palace", "City"
     }
 
-[effect_palace_5]
+[effect_palace_shield_bonus_Despotism]
 type = "Output_Bonus"
 value  = 75
 reqs =
@@ -1721,7 +1727,7 @@ reqs =
       "OutputType", "Shield", "Local"
     }
 
-[effect_palace_6]
+[effect_palace_shield_bonus_Monarchy]
 type = "Output_Bonus"
 value  = 50
 reqs =
@@ -1731,7 +1737,7 @@ reqs =
       "OutputType", "Shield", "Local"
     }
 
-[effect_police_station]
+[effect_police_station_Republic]
 type    = "Make_Content_Mil"
 value	= 1
 reqs	=
@@ -1744,7 +1750,7 @@ nreqs	=
       "Building", "Women's Suffrage", "Player"
     }
 
-[effect_police_station_1]
+[effect_police_station_Democracy]
 type    = "Make_Content_Mil"
 value	= 2
 reqs	=
@@ -1757,7 +1763,7 @@ nreqs	=
       "Building", "Women's Suffrage", "Player"
     }
 
-[effect_port_facility]
+[effect_port_facility_vet_sea]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -1771,7 +1777,7 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_port_facility_1]
+[effect_port_facility_heal_sea]
 type    = "HP_Regen"
 value	= 100
 reqs	=
@@ -1780,7 +1786,7 @@ reqs	=
       "UnitClass", "Sea", "Local"
     }
 
-[effect_port_facility_trireme]
+[effect_port_facility_vet_trireme]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -1794,7 +1800,7 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_port_facility_trireme_1]
+[effect_port_facility_heal_trireme]
 type    = "HP_Regen"
 value	= 100
 reqs	=
@@ -1803,7 +1809,7 @@ reqs	=
       "UnitClass", "Trireme", "Local"
     }
 
-[effect_power_plant]
+[effect_power_plant_factory_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -1820,7 +1826,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_power_plant_1]
+[effect_power_plant_mfg_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -1837,7 +1843,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_recycling_center]
+[effect_recycling_center_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -66
 reqs	=
@@ -1858,7 +1864,7 @@ nreqs	=
 ; other than addition...)
 
 ; Factory and no Mfg. Plant: Solar Plant saves 50%, less than 66%; add 16%
-[effect_recycling_center_1]
+[effect_recycling_center_factory_solar_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -16
 reqs	=
@@ -1873,7 +1879,7 @@ nreqs	=
     }
 
 ; Mfg. Plant and no Factory: Solar Plant saves 50%, less than 66%; add 16%
-[effect_recycling_center_2]
+[effect_recycling_center_mfg_solar_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -16
 reqs	=
@@ -1888,7 +1894,7 @@ nreqs	=
     }
 
 ; Neither Factory nor Mfg. Plant: Solar Plant saves 0%; add 66%
-[effect_recycling_center_3]
+[effect_recycling_center_solar_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -66
 reqs	=
@@ -1902,7 +1908,7 @@ nreqs	=
       "Building", "Mfg. Plant", "City"
     }
 
-[effect_research_lab]
+[effect_research_lab_library_science]
 type    = "Output_Bonus"
 value	= 100
 reqs	=
@@ -1912,7 +1918,7 @@ reqs	=
       "OutputType", "Science", "Local"
     }
 
-[effect_research_lab_1]
+[effect_research_lab_uni_science]
 type    = "Output_Bonus"
 value	= 100
 reqs	=
@@ -1931,7 +1937,7 @@ reqs	=
       "UnitClass", "Air", "Local"
     }
 
-[effect_sdi_defense]
+[effect_sdi_defense_nuke]
 type    = "Nuke_Proof"
 value	= 100
 reqs	=
@@ -1939,7 +1945,7 @@ reqs	=
       "Building", "SDI Defense", "City"
     }
 
-[effect_sdi_defense_1]
+[effect_sdi_defense_missile]
 type    = "Defend_Bonus"
 value	= 50
 reqs	=
@@ -1948,7 +1954,7 @@ reqs	=
       "UnitClass", "Missile", "Local"
     }
 
-[effect_sewer_system]
+[effect_sewer_system_size]
 type    = "Size_Unlimit"
 value	= 1
 reqs	=
@@ -1966,7 +1972,7 @@ reqs	=
       "Building", "Sewer System", "City"
     }
 
-[effect_solar_plant]
+[effect_solar_plant_factory_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -1976,7 +1982,7 @@ reqs	=
       "OutputType", "Shield", "Local"
     }
 
-[effect_solar_plant_1]
+[effect_solar_plant_mfg_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -1986,7 +1992,7 @@ reqs	=
       "OutputType", "Shield", "Local"
     }
 
-[effect_solar_plant_2]
+[effect_solar_plant_factory_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -50
 reqs	=
@@ -1995,7 +2001,7 @@ reqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_solar_plant_3]
+[effect_solar_plant_mfg_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -50
 reqs	=
@@ -2052,7 +2058,7 @@ reqs    =
       "Tech", "Space Flight", "World"
     }
 
-[effect_stock_exchange]
+[effect_stock_exchange_gold]
 type    = "Output_Bonus"
 value	= 50
 reqs	=
@@ -2062,7 +2068,7 @@ reqs	=
       "OutputType", "Gold", "Local"
     }
 
-[effect_stock_exchange_1]
+[effect_stock_exchange_lux]
 type    = "Output_Bonus"
 value	= 50
 reqs	=
@@ -2082,7 +2088,7 @@ reqs	=
       "OutputType", "Trade", "Local"
     }
 
-[effect_supermarket]
+[effect_supermarket_surrounds]
 type    = "Output_Per_Tile"
 value	= 50
 reqs	=
@@ -2096,7 +2102,7 @@ nreqs   =
       "CityTile", "Center", "Local"
     }
 
-[effect_supermarket_2]
+[effect_supermarket_city_center]
 type    = "Output_Per_Tile"
 value	= 50
 reqs	=
@@ -2111,7 +2117,7 @@ nreqs   =
       "Special", "Mine", "Local"
     }
 
-[effect_temple]
+[effect_temple_base]
 type    = "Make_Content"
 value	= 1
 reqs	=
@@ -2119,7 +2125,7 @@ reqs	=
       "Building", "Temple", "City"
     }
 
-[effect_temple_1]
+[effect_temple_mystic]
 type    = "Make_Content"
 value	= 1
 reqs	=
@@ -2216,7 +2222,7 @@ reqs	=
       "Building", "Great Library", "Player"
     }
 
-[effect_great_wall]
+[effect_great_wall_def_land]
 type    = "Defend_Bonus"
 value	= 100
 reqs	=
@@ -2226,7 +2232,7 @@ reqs	=
       "CityTile", "Center", "Local"
     }
 
-[effect_great_wall_0]
+[effect_great_wall_def_heli]
 type    = "Defend_Bonus"
 value	= 100
 reqs	=
@@ -2236,7 +2242,7 @@ reqs	=
       "CityTile", "Center", "Local"
     }
 
-[effect_great_wall_1]
+[effect_great_wall_save_lives]
 type    = "Unit_No_Lose_Pop"
 value	= 1
 reqs	=
@@ -2251,7 +2257,8 @@ reqs	=
     { "type", "name", "range"
       "Building", "Great Wall", "Player"
     }
-[effect_hanging_gardens]
+
+[effect_hanging_gardens_content]
 name    = "Make_Content"
 value   = 1
 reqs    =
@@ -2259,7 +2266,7 @@ reqs    =
       "Building", "Hanging Gardens", "Player"
     }
 
-[effect_hanging_gardens_1]
+[effect_hanging_gardens_luxury]
 name    = "Output_Add_Tile"
 value   = 4
 reqs    =
@@ -2269,7 +2276,7 @@ reqs    =
       "OutputType", "Luxury", "Local"
     }
 
-[effect_hoover_dam]
+[effect_hoover_dam_factory_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -2283,7 +2290,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_hoover_dam_1]
+[effect_hoover_dam_mfg_shield]
 type    = "Output_Bonus"
 value	= 25
 reqs	=
@@ -2297,7 +2304,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_hoover_dam_2]
+[effect_hoover_dam_factory_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -25
 reqs	=
@@ -2311,7 +2318,7 @@ nreqs	=
       "Building", "Solar Plant", "City"
     }
 
-[effect_hoover_dam_3]
+[effect_hoover_dam_mfg_pollu]
 type    = "Pollu_Prod_Pct"
 value	= -25
 reqs	=
@@ -2373,7 +2380,7 @@ reqs	=
     { "type", "name", "range"
       "Building", "Leonardo's Workshop", "Player"
     }
-[effect_lighthouse]
+[effect_lighthouse_sea]
 name	= "Move_Bonus"
 value	= 1
 reqs	=
@@ -2382,7 +2389,7 @@ reqs	=
       "UnitClass", "Sea", "Local"
     }
 
-[effect_lighthouse_1]
+[effect_lighthouse_trireme]
 name	= "Move_Bonus"
 value	= 1
 reqs	=
@@ -2391,7 +2398,7 @@ reqs	=
       "UnitClass", "Trireme", "Local"
     }	
 
-[effect_magellans_expedition]
+[effect_magellans_expedition_vet_sea]
 name	= "Veteran_Build"
 value	= 1
 reqs	=
@@ -2406,7 +2413,7 @@ nreqs   =
     }
 
 ; Should be quite useless, just in case:
-[effect_magellans_expedition_1]
+[effect_magellans_expedition_vet_trireme]
 name	= "Veteran_Build"
 value	= 1
 reqs	=
@@ -2437,7 +2444,7 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
-[effect_michelangelos_chapel]
+[effect_michelangelos_chapel_base]
 name    = "Make_Content"
 value   = 3
 reqs    =
@@ -2445,7 +2452,7 @@ reqs    =
       "Building", "Michelangelo's Chapel", "Player"
     }
 
-[effect_michelangelos_chapel_1]
+[effect_michelangelos_chapel_theology]
 name    = "Make_Content"
 value   = 1
 reqs    =
@@ -2454,7 +2461,7 @@ reqs    =
       "Building", "Michelangelo's Chapel", "Player"
     }
 
-[effect_michelangelos_chapel_2]
+[effect_michelangelos_chapel_communism]
 name    = "Make_Content"
 value   = -1
 reqs    =
@@ -2472,7 +2479,7 @@ reqs	=
       "Building", "Oracle", "Player"
     }
 	
-[effect_pyramids]
+[effect_pyramids_shield]
 name    = "Output_Inc_Tile"
 value   = 1
 reqs    =
@@ -2499,7 +2506,7 @@ reqs	=
       "Building", "Shakespeare's Theatre", "City"
     }
 
-[effect_statue_of_liberty]
+[effect_statue_of_liberty_freedom_of_choice]
 type    = "Any_Government"
 value	= 1
 reqs	=
@@ -2507,7 +2514,7 @@ reqs	=
       "Building", "Statue of Liberty", "Player"
     }
 
-[effect_statue_of_liberty_1]
+[effect_statue_of_liberty_no_anarchy]
 type    = "No_Anarchy"
 value	= 1
 reqs	=
@@ -2515,7 +2522,7 @@ reqs	=
       "Building", "Statue of Liberty", "Player"
     }
 
-[effect_sun_tzus_war_academy]
+[effect_sun_tzus_war_academy_vet_land]
 type    = "Veteran_Build"
 value	= 1
 reqs	=
@@ -2529,7 +2536,7 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_sun_tzus_war_academy_1]
+[effect_sun_tzus_war_academy_vet_raise_land]
 type    = "Veteran_Combat"
 value	= 50
 reqs	=
@@ -2550,7 +2557,7 @@ reqs	=
       "Building", "United Nations", "Player"
     }
 
-[effect_womens_suffrage]
+[effect_womens_suffrage_Republic]
 type    = "Make_Content_Mil"
 value	= 1
 reqs	=
@@ -2559,7 +2566,7 @@ reqs	=
       "Building", "Women's Suffrage", "Player"
     }
 
-[effect_womens_suffrage_1]
+[effect_womens_suffrage_Democracy]
 type    = "Make_Content_Mil"
 value	= 2
 reqs	=
@@ -2934,7 +2941,7 @@ value   = 1
 ;type	= "Enable_Space"
 ;value	= 1
 
-;[effect_migration_small_town_bonus]
+;[effect_migration_small_town_bonus_in]
 ;type	= "Migration_Pct"
 ;value	= 33
 ;reqs	=
@@ -2942,7 +2949,7 @@ value   = 1
 ;      "MinSize", "1", "City"
 ;    }
 
-;[effect_migration_small_town_bonus_0]
+;[effect_migration_small_town_bonus_out]
 ;type	= "Migration_Pct"
 ;value	= -33
 ;reqs	=
