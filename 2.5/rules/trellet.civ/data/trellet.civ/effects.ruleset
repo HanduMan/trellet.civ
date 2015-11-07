@@ -1035,20 +1035,6 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
-[effect_airport_vet_missile]
-type    = "Veteran_Build"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Airport", "City"
-      "UnitClass", "Missile", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "UnitFlag", "NonMil", "Local"
-      "UnitFlag", "NoVeteran", "Local"
-    }
-
 [effect_airport_heal_air]
 type    = "HP_Regen"
 value	= 100
@@ -1939,7 +1925,7 @@ reqs	=
 
 [effect_sdi_defense_nuke]
 type    = "Nuke_Proof"
-value	= 100
+value	= 55
 reqs	=
     { "type", "name", "range"
       "Building", "SDI Defense", "City"

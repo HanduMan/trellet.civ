@@ -1083,7 +1083,6 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Laser", "Player"
-	  "Building", "SDI Defense", "City"
     }
 graphic	= "b.sdi_defense"
 graphic_alt	= "-"
@@ -1097,11 +1096,10 @@ helptext	= _("\
 Protects a city and its environs (up to 2 tiles away) from attacks\
  by Nuclear units. A Nuclear unit attacking a city with SDI Defense,\
  or attacking a unit (or deliberately exploded) within range, is shot\
- down and simply has no effect. Also, doubles defense for units in\
+ down and simply has no effect. This defensive action has a 54% success\
+ rate. Also, increases by 50% the defense for units in\
  the city against non-nuclear missiles.\
 ")
-; NOTE:
-; Civ2 does not document the "Unit_Defend"/"Missile" aspect; does it apply or not?
 
 [building_sewer_system]
 name		= _("Sewer System")
@@ -1375,6 +1373,7 @@ upkeep		= 10
 sabotage	= 100
 sound		= "b_manhattan_project"
 sound_alt	= "b_generic"
+flags       = "VisibleByOthers" 
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Allows you to build nukes!\

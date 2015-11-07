@@ -128,6 +128,14 @@ hp_loss_pct   = 0
 hut_behavior  = "Frighten"
 flags         = "Missile", "Unreachable", "DoesntOccupyTile"
 
+[unitclass_nuclear_missile]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Nuclear Missile")
+min_speed     = 1
+hp_loss_pct   = 0
+hut_behavior  = "Frighten"
+flags         = "Missile", "Unreachable", "DoesntOccupyTile"
+
 [unitclass_land]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Land")
@@ -1050,13 +1058,12 @@ hitpoints     = 35
 firepower     = 1
 move_rate     = 6
 vision_radius_sq = 2
-transport_cap = 3
+transport_cap = 0
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 4
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Missile"
 flags         = "Shield2Gold", "Capturer"
 roles         = "DefendGood"
 helptext      = _("\
@@ -1514,13 +1521,12 @@ hitpoints     = 20
 firepower     = 2
 move_rate     = 12
 vision_radius_sq = 8
-transport_cap = 8
+transport_cap = 0
 fuel          = 2
 uk_happy      = 1
 uk_shield     = 3
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Missile"
 flags         = "FieldUnit", "OneAttack", "AirAttacker", "Shield2Gold"
 roles         = ""
 helptext      = _("\
@@ -1659,7 +1665,7 @@ hitpoints     = 20
 firepower     = 2
 move_rate     = 16
 vision_radius_sq = 8
-transport_cap = 8
+transport_cap = 1
 fuel          = 2
 uk_happy      = 1
 uk_shield     = 5
@@ -2224,7 +2230,8 @@ uk_shield     = 2
 uk_food       = 0
 uk_gold       = 0
 targets       = "Air", "Missile" 
-flags         = "FieldUnit", "OneAttack", "AirAttacker"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "NoVeteran"
+disembarks    = "Air"
 roles         = ""
 helptext      = _("\
 The Rocket is a short-distance missile\
@@ -2250,17 +2257,18 @@ pop_cost      = 0
 attack        = 20
 defense       = 0
 hitpoints     = 10
-firepower     = 10
+firepower     = 6
 bombard_rate  = 1 
 move_rate     = 16
-vision_radius_sq = 0
+vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
 uk_happy      = 1
 uk_shield     = 5
 uk_food       = 0
 uk_gold       = 0
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "Shield2Gold"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "NoVeteran", "Shield2Gold"
+disembarks    = "Air"
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
@@ -2272,7 +2280,7 @@ TIP:  A handful of these can successfully keep the waters around\
 
 [unit_nuclear]
 name          = _("Nuclear")
-class         = "Missile"
+class         = "Nuclear Missile"
 tech_req      = "Rocketry"
 impr_req      = "Missile Silo"
 obsolete_by   = "None"
@@ -2282,21 +2290,22 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 360
+build_cost    = 1800
 pop_cost      = 0
 attack        = 99
 defense       = 0
 hitpoints     = 10
 firepower     = 1
 move_rate     = 25
-vision_radius_sq = 0
+vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
-uk_happy      = 50
-uk_shield     = 50
+uk_happy      = 107
+uk_shield     = 107
 uk_food       = 0
 uk_gold       = 0
-flags         = "FieldUnit", "OneAttack", "Nuclear", "AirAttacker", "Unique", "Shield2Gold"
+flags         = "FieldUnit", "OneAttack", "Nuclear", "NoVeteran",
+                "Unbribable", "Unique", "Shield2Gold"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
