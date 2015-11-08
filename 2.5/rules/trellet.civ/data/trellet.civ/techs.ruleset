@@ -361,9 +361,9 @@ graphic_alt = "-"
 
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
-req1     = "Medicine"
-req2     = "The Corporation"
-root_req = "The Corporation"
+req1     = "Computers"
+req2     = "Advanced Flight"
+root_req = "Advanced Flight"
 flags    = ""
 graphic     = "a.genetic_engineering"
 graphic_alt = "-"

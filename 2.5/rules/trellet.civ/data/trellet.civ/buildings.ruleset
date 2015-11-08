@@ -741,10 +741,10 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 In a Genetic Laboratory medicaments can be researched. The possibility\
- for plagues within the city is reduced.\
+ for plagues within the city is reduced by 10%.\
 \n\
 A Genetic Laboratory allows the genetic optimization of plants and animals.\
- The food output is increased by 25% if the city size exceeds 20.\
+ The food output is increased by 10% if the city size exceeds 20.\
 ")
 
 [building_library]
