@@ -109,14 +109,34 @@ reqs    =
 type    = "Tech_Upkeep_Free"
 value   = 30
 
-; Fortress HP regen
-[effect_fortress_hp_regen]
+; Base HP loss inside city
+[effect_city_unheal_all]
 type    = "HP_Regen"
-value   = 25
+value   = -34
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+    }
+
+
+; Fortress HP regen for Land
+[effect_fortress_heal_land]
+type    = "HP_Regen"
+value   = 15
 reqs    =
     { "type", "name", "range"
       "Base", "Fortress", "Tile"
       "UnitClass", "Land", "Local"
+    }
+
+; Fortress HP regen for Big Land
+[effect_fortress_heal_big]
+type    = "HP_Regen"
+value   = 15
+reqs    =
+    { "type", "name", "range"
+      "Base", "Fortress", "Tile"
+      "UnitClass", "Big Land", "Local"
     }
 
 ; Nuclear power gives +1 moves to sea units
@@ -1037,7 +1057,7 @@ nreqs   =
 
 [effect_airport_heal_air]
 type    = "HP_Regen"
-value	= 100
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Airport", "City"
@@ -1046,7 +1066,7 @@ reqs	=
 
 [effect_airport_heal_heli]
 type    = "HP_Regen"
-value	= 100
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Airport", "City"
@@ -1136,7 +1156,7 @@ nreqs   =
 
 [effect_barracks_heal_land]
 type    = "HP_Regen"
-value	= 100
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Barracks", "City"
@@ -1150,7 +1170,7 @@ nreqs   =
 
 [effect_barracks_heal_big]
 type    = "HP_Regen"
-value   = 100
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Building", "Barracks", "City"
@@ -1194,7 +1214,7 @@ nreqs   =
 
 [effect_barracks_ii_heal_land]
 type    = "HP_Regen"
-value	= 100
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Barracks II", "City"
@@ -1207,7 +1227,7 @@ nreqs   =
 
 [effect_barracks_ii_heal_big]
 type    = "HP_Regen"
-value   = 100
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Building", "Barracks II", "City"
@@ -1248,7 +1268,7 @@ nreqs   =
 
 [effect_barracks_iii_heal_land]
 type    = "HP_Regen"
-value	= 100
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Barracks III", "City"
@@ -1257,7 +1277,7 @@ reqs	=
 
 [effect_barracks_iii_heal_big]
 type    = "HP_Regen"
-value   = 100
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Building", "Barracks III", "City"
@@ -1431,6 +1451,66 @@ reqs	=
       "OutputType", "Shield", "Local"
     }
 
+[effect_factory_heal_air]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Airport", "City"
+      "Building", "Factory", "City"
+      "UnitClass", "Air", "Local"
+    }
+
+[effect_factory_heal_heli]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Airport", "City"
+      "Building", "Factory", "City"
+      "UnitClass", "Helicopter", "Local"
+    }
+
+[effect_factory_heal_big_i]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks", "City"
+      "Building", "Factory", "City"
+      "UnitClass", "Big Land", "Local"
+    }
+
+[effect_factory_heal_big_ii]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks II", "City"
+      "Building", "Factory", "City"
+      "UnitClass", "Big Land", "Local"
+    }
+
+[effect_factory_heal_big_iii]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks III", "City"
+      "Building", "Factory", "City"
+      "UnitClass", "Big Land", "Local"
+    }
+
+[effect_factory_heal_sea]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Port Facility", "City"
+      "Building", "Factory", "City"
+      "UnitClass", "Sea", "Local"
+    }
+
 [effect_granary]
 type    = "Growth_Food"
 value   = 50
@@ -1453,8 +1533,38 @@ reqs	=
 type   = "Health_Pct"
 value  = 25
 reqs   =
-    {"type", "name", "range"
-     "Building", "Hospital", "City"
+    { "type", "name", "range"
+      "Building", "Hospital", "City"
+    }
+
+[effect_hospital_heal_land_i]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks", "City"
+      "Building", "Hospital", "City"
+      "UnitClass", "Land", "Local"
+    }
+
+[effect_hospital_heal_land_ii]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks II", "City"
+      "Building", "Hospital", "City"
+      "UnitClass", "Land", "Local"
+    }
+
+[effect_hospital_heal_land_iii]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks III", "City"
+      "Building", "Hospital", "City"
+      "UnitClass", "Land", "Local"
     }
 
 [effect_hydro_plant_factory_shield]
@@ -1525,8 +1635,38 @@ nreqs	=
 type   = "Health_Pct"
 value  = 10
 reqs   =
-    {"type", "name", "range"
-     "Building", "Genetic Lab", "City"
+    { "type", "name", "range"
+      "Building", "Genetic Lab", "City"
+    }
+
+[effect_genetic_lab_heal_land_i]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks", "City"
+      "Building", "Genetic Lab", "City"
+      "UnitClass", "Land", "Local"
+    }
+
+[effect_genetic_lab_heal_land_ii]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks II", "City"
+      "Building", "Genetic Lab", "City"
+      "UnitClass", "Land", "Local"
+    }
+
+[effect_genetic_lab_heal_land_iii]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks III", "City"
+      "Building", "Genetic Lab", "City"
+      "UnitClass", "Land", "Local"
     }
 
 [effect_genetic_lab_food]
@@ -1581,6 +1721,66 @@ reqs	=
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
       "OutputType", "Shield", "Local"
+    }
+
+[effect_mfg_plant_heal_air]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Airport", "City"
+      "Building", "Mfg. Plant", "City"
+      "UnitClass", "Air", "Local"
+    }
+
+[effect_mfg_plant_heal_heli]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Airport", "City"
+      "Building", "Mfg. Plant", "City"
+      "UnitClass", "Helicopter", "Local"
+    }
+
+[effect_mfg_plant_heal_big_i]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks", "City"
+      "Building", "Mfg. Plant", "City"
+      "UnitClass", "Big Land", "Local"
+    }
+
+[effect_mfg_plant_heal_big_ii]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks II", "City"
+      "Building", "Mfg. Plant", "City"
+      "UnitClass", "Big Land", "Local"
+    }
+
+[effect_mfg_plant_heal_big_iii]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks III", "City"
+      "Building", "Mfg. Plant", "City"
+      "UnitClass", "Big Land", "Local"
+    }
+
+[effect_mfg_plant_heal_sea]
+type    = "HP_Regen"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Port Facility", "City"
+      "Building", "Mfg. Plant", "City"
+      "UnitClass", "Sea", "Local"
     }
 
 [effect_nuclear_plant_factory_shield]
@@ -1765,7 +1965,7 @@ nreqs   =
 
 [effect_port_facility_heal_sea]
 type    = "HP_Regen"
-value	= 100
+value	= 20
 reqs	=
     { "type", "name", "range"
       "Building", "Port Facility", "City"
@@ -2888,9 +3088,9 @@ reqs    =
     }
 
 ; Airbase HP regen for air units
-[effect_airbase_hp_regen_a]
+[effect_airbase_heal_air]
 type    = "HP_Regen"
-value   = 25
+value   = 15
 reqs    =
     { "type", "name", "range"
       "Base", "Airbase", "Tile"
@@ -2898,9 +3098,9 @@ reqs    =
     }
 
 ; Airbase HP regen for helicopter units
-[effect_airbase_hp_regen_h]
+[effect_airbase_heal_heli]
 type    = "HP_Regen"
-value   = 25
+value   = 15
 reqs    =
     { "type", "name", "range"
       "Base", "Airbase", "Tile"
