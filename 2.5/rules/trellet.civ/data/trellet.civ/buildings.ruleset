@@ -429,7 +429,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 With a Barracks, each new land unit built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
+ defense strengths are increased by 25%.  Also, damaged land units\
  which stay in town get 20% of their total HP restored on each\
  full turn they do not move a muscle.\
  A Hospital in the city boosts the healing process by 5%\
@@ -457,7 +457,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 With a Barracks, each new land unit built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
+ defense strengths are increased by 25%.  Also, damaged land units\
  which stay in town get 20% of their total HP restored on each\
  full turn they do not move a muscle.\
  A Hospital in the city boosts the healing process by 5%\
@@ -484,7 +484,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 With a Barracks, each new land unit built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
+ defense strengths are increased by 25%.  Also, damaged land units\
  which stay in town get 20% of their total HP restored on each\
  full turn they do not move a muscle.\
  A Hospital in the city boosts the healing process by 5%\
@@ -535,10 +535,10 @@ sabotage	= 50
 sound		= "b_city_walls"
 sound_alt	= "b_generic"
 helptext	= _("\
-City Walls make it easier to defend a city.  They triple the defense\
+City Walls make it easier to defend a city.  They double the defense\
  strength of units within the city against land and helicopter\
- units.  They are ineffective against airborne and sea units as well\
- as Howitzers.  City Walls also prevent the loss of population which\
+ units.  They are ineffective against airborne and sea units.\
+ City Walls also prevent the loss of population which\
  occurs when a defending unit is destroyed by a land unit.\
 ")
 
@@ -559,8 +559,10 @@ sabotage	= 100
 sound		= "b_coastal_defense"
 sound_alt	= "b_generic"
 helptext	= _("\
-Increases the defense strength of units within a city by a factor\
- of 2 when defending against bombardments from enemy ships.\
+Increases the defense strength of units within a city by 50%\
+ when defending against bombardments from enemy ships.\
+ If the attacking ship belongs to Trireme class then\
+ the defense strength is doubled.\
 ")
 
 [building_colosseum]
@@ -1095,7 +1097,8 @@ sabotage	= 100
 sound		= "b_sam_battery"
 sound_alt	= "b_generic"
 helptext	= _("\
-Doubles the defense of all units inside the city when attacked by\
+Increases the defense strength of all units inside the city\
+ by 50% when attacked by\
  aircraft (not including helicopters or missiles).\
 ")
 
