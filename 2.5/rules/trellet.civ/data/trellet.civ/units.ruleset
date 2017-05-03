@@ -163,9 +163,9 @@ flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere",
 name          = _("?unitclass:Big Land")
 min_speed     = 1
 hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
+flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere",
                 "CollectRansom", "ZOC", "CanFortify", "CanPillage",
-                "TerrainDefense", "KillCitizen"
+                "TerrainDefense"
 
 [unitclass_sea]
 ; /* TRANS: Unit class: used adjectivally */
@@ -1041,7 +1041,7 @@ paratroopers_mr_sub = 0
 
 [unit_mech_inf]
 name          = _("Mech. Inf.")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Labor Union"
 obsolete_by   = "None"
 graphic       = "u.mech_inf"
@@ -1297,7 +1297,7 @@ Cavalry are mounted and highly trained soldiers.\
 
 [unit_armor]
 name          = _("Armor")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Mobile Warfare"
 obsolete_by   = "None"
 graphic       = "u.armor"
