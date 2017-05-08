@@ -362,48 +362,49 @@ colorlist =
  set =
      { "name", "value", "lock"
 		"saveturns", 1, FALSE
-		"savename", "megaciv_7", FALSE
+		"savename", "megaciv_7_parallel", FALSE
 		"timeout", 82800, FALSE ; 23 hours
-		"first_timeout", 248400 ; 3 * 23 hours
+		"first_timeout", 165600 ; 2 * 23 hours
 		"turnblock", TRUE, FALSE
 		"fixedlength", FALSE, FALSE
 		"nationset", "All", FALSE
+		"maxconnectionsperhost", 107, FALSE
 
 		"ec_turns", 6, FALSE
 		"ec_max_size", 10000, FALSE
 		"ec_chat", TRUE, FALSE
 		"ec_info", TRUE, FALSE
 
-		"generator", "FRACTAL", FALSE
+		"generator", "ISLAND", FALSE
 		;	SCENARIO: "Scenario map"
 		;	RANDOM: "Fully random height"
 		;	FRACTAL: "Pseudo-fractal height"
 		;	ISLAND: "Island-based"
 		;	FAIR: "Fair islands"
 
-		"startpos", "ALL", FALSE
+		"startpos", "SINGLE", FALSE
 		;	DEFAULT: "Generator's choice"
 		;	SINGLE: "One player per continent"
 		;	2or3: "Two or three players per continent"
 		;	ALL: "All players on a single continent"
 		;	VARIABLE: "Depending on size of continents"
 
-		"mapsize", "XYSIZE", FALSE
+		"mapsize", "PLAYER", FALSE
 		;	"Number of tiles" (FULLSIZE): Map area (option 'size').
 		;	"Tiles per player" (PLAYER): Number of (land) tiles per player (option 'tilesperplayer').
 		;	"Width and height" (XYSIZE): Map width and height in tiles (options 'xsize' and 'ysize').		
 
 		"size", 8, FALSE 				; If mapsize is FULLSIZE
-		"tilesperplayer", 266, FALSE 	; If mapsize is PLAYER
+		"tilesperplayer", 320, FALSE 	; If mapsize is PLAYER
 		"xsize", 70, FALSE 				; If mapsize is XYSIZE
 		"ysize", 140, FALSE 			; If mapsize is XYSIZE
 		
 		"topology", "WRAPX|WRAPY|ISO|HEX", FALSE
 		"alltemperate", TRUE, FALSE
-		"temperature", 40, FALSE
-		"landmass", 50, FALSE
-		"steepness", 20, FALSE
-		"wetness", 35, FALSE
+		"temperature", 50, FALSE
+		"landmass", 40, FALSE
+		"steepness", 40, FALSE
+		"wetness", 60, FALSE
 		"specials", 20, FALSE
 		"huts", 0, FALSE
 		"tinyisles", FALSE, FALSE
@@ -473,12 +474,12 @@ colorlist =
 		"allowtake", "b", FALSE
 
 		; uncomment for a test game:
-		"savename", "trellet_civ_test_7", FALSE
-		"scorefile", "trellet_civ_test_7_score.log", FALSE
-		"unitwaittime", 0, FALSE 
-		"timeout", 1800, FALSE
-		"diplomacy", "ALL", FALSE
-		"allowtake", "oObdaAhH", FALSE
-		"aifill", 14, FALSE
+		;"savename", "trellet_civ_test_7", FALSE
+		;"scorefile", "trellet_civ_test_7_score.log", FALSE
+		;"unitwaittime", 0, FALSE 
+		;"timeout", 1800, FALSE
+		;"diplomacy", "ALL", FALSE
+		;"allowtake", "oObdaAhH", FALSE
+		;"aifill", 8, FALSE
      }
 	 
