@@ -36,8 +36,8 @@ move_fragments = 9
 ; How many move_fragments IgTer unit movement costs
 igter_cost = 3
 
-; There are resources in the middle of the oceans, not only near coast
-ocean_resources = TRUE
+; There are no resources in the middle of the oceans, only near coast
+ocean_resources = FALSE
 
 ; percent subtracted from food production if tile is polluted
 pollution_food_penalty=50
